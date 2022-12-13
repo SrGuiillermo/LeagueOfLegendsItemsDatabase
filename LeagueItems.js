@@ -1,5 +1,4 @@
-// This database contains all League of Legends items's stats, passives, actives and everything you would need
-// to build everything you desire in JavaScript Object format. The items are written the following way:
+// This database contains all League of Legends items's stats, passives, actives and everything in a .js file. The items are written the following way:
 // Object name : {                               --> In-game name of the object
 //      type of object : true,                   --> Such as mythic, legendary, basic, etc. ornn for ornn's upgraded mythics
 //      name : 'name',                           --> The name of the object to display, capìtalized in string format
