@@ -886,7 +886,7 @@ export const league_of_legends_items = {
         mythic : true,
         name : "Jak'Sho, The Protean",
         id : 6665,
-        price : 3000,
+        price : 3100,
         stats : {
             hp : 400,
             armor : 30,
@@ -895,7 +895,7 @@ export const league_of_legends_items = {
         },
         tank : true,
         passive_name : 'Voidborn resilence',
-        passive_description : `For each second in combat with champions, gain 3 bonus armor and bonus magic resistance for 6 seconds, stacking up to 8 times
+        passive_description : `For each second in combat with champions, gain 2 bonus armor and bonus magic resistance for 6 seconds, stacking up to 8 times
                                for 24 bonus resistances. At maximum stacks instantly deal 3% maximum health magic damage to enemies within 700 units (2.1% against non-champions)
                                heal for the same amount for each enemy damaged, and increase your total resistances by 15% until the end of combat.`,
         mythic_stats : {
@@ -1778,7 +1778,7 @@ export const league_of_legends_items = {
         id : 3095,
         price : 2700,
         stats : {
-            ad : 40,
+            ad : 45,
             '%as': 0.15,
             '%crit' : 0.2,
         },
@@ -2095,8 +2095,8 @@ export const league_of_legends_items = {
         assasin : true,
         builds_from : ['last_whisper', 'cloack_of_agility'],
         passive_name : 'Giant slayer',
-        passive_description : `Deal 0% - 15% (based on maximum health difference) bonus physical damage against enemy champions with
-                               greater maximum health than you. Limited to 1 Last Whisper item.`,
+        passive_description : `Deal 0% - 25% (based on maximum health difference)(maximum bonus at 2500 health difference) 
+                               bonus physical damage against enemy champions with greater maximum health than you. Limited to 1 Last Whisper item.`,
     },
 
     warmogs_armor : {
@@ -2417,12 +2417,12 @@ export const league_of_legends_items = {
         assasin : true,
         builds_from : ['tiamat', 'vampiric_scepter', 'cauldfields_warhammer'],
         passive_name : 'Cleave',
-        passive_description : `Damaging basic attacks and ability damage from abilities deal 50% [Melee champion] / 25% [Ranged champion] total AD
+        passive_description : `Damaging basic attacks and ability damage from abilities deal 40% [Melee champion] / 20% [Ranged champion] total AD
                                physical damage to other enemies within 350 units. Can only hit each target once per attack or ability, and may only
                                trigger once every 10 seconds from the same cast. Limited to 1 Hydra item.`,
         passive2_name : 'Carnivorous',
         passive2_description : `Gain 0.5 bonus AD whenever you kill a minion, doubled for kills againts champions, large monsters and
-                                large minions. This effect stacks up to 40 times for a total of 20 bonus AD. Lose 50% of stacks upon death.`,
+                                large minions. This effect stacks up to 40 times for a total of 20 bonus AD. Lose 60% of stacks upon death.`,
     },
 
     blade_of_the_ruined_king : {
@@ -3200,7 +3200,7 @@ export const league_of_legends_items = {
         builds_into : ['ravenous_hydra', 'titanic_hydra'],
         builds_from : ['pickaxe'],
         passive_name : 'Cleave',
-        passive_description : `Basic attacks on-hit deal 50% total AD [Melee champion] / 25% total AD [Ranged champion] physical damage
+        passive_description : `Basic attacks on-hit deal 40% total AD [Melee champion] / 20% total AD [Ranged champion] physical damage
                                to other enemies within 350 units of the target.`,
     },
 
