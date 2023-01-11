@@ -886,7 +886,7 @@ export const league_of_legends_items = {
         mythic : true,
         name : "Jak'Sho, The Protean",
         id : 6665,
-        price : 3100,
+        price : 3200,
         stats : {
             hp : 400,
             armor : 30,
@@ -897,7 +897,7 @@ export const league_of_legends_items = {
         passive_name : 'Voidborn resilence',
         passive_description : `For each second in combat with champions, gain 2 bonus armor and bonus magic resistance for 6 seconds, stacking up to 8 times
                                for 24 bonus resistances. At maximum stacks instantly deal 3% maximum health magic damage to enemies within 700 units (2.1% against non-champions)
-                               heal for the same amount for each enemy damaged, and increase your total resistances by 15% until the end of combat.`,
+                               heal for the same amount for each enemy damaged, and increase your bonus resistances by 20% until the end of combat.`,
         mythic_stats : {
             armor : 5,
             mr : 5,
@@ -1007,7 +1007,7 @@ export const league_of_legends_items = {
         price : 2800,
         stats : {
             ap : 60,
-            hp : 300,
+            hp : 400,
             mana : 400,
         },
         mage : true,
@@ -1016,9 +1016,9 @@ export const league_of_legends_items = {
                                of 200 bonus health, 200 bonus mana, and 40 ability power. Upon reaching maximum stacks, gain a level that
                                preserves your current experience (cap remains at level 18) and increase all effects of Eternity by 50%.`,
         passive2_name : 'Eternity',
-        passive2_description : `Restore mana equal to 8% of pre-mitigation damage taken from champions, and heal for an amount equal to 20%
-                                of mana spent, up to 15 per cast. Toggled abilities can only heal for up to 15 per second. For every 250 healing
-                                or mana restored this way, gain 25% bonus movement speed that decays over 2 seconds. Limited to 1 Eternity item.`,
+        passive2_description : `Restore mana equal to 7% of pre-mitigation damage taken from champions, and heal for an amount equal to 25%
+                                of mana spent, up to 20 per cast. Toggled abilities can only heal for up to 15 per second. For every 200 healing
+                                or mana restored this way, gain 35% bonus movement speed that decays over 3 seconds. Limited to 1 Eternity item.`,
         mythic_stats : {
             haste : 5,
         },
@@ -1582,17 +1582,18 @@ export const league_of_legends_items = {
         legendary : true,
         name : "Archangel's Staff",
         id : 3003,
-        price : 2600,
+        price : 3000,
         stats : {
-            ap : 60,
+            ap : 80,
             mana : 500,
             hp : 200,
+            haste : 10,
         },
         mage : true,
         builds_into : ['seraphs_embrace'],
         builds_from : ['tear_of_the_goddess', 'kindlegem', 'blasting_wand'],
         passive_name : 'Awe',
-        passive_description : `Grants ability haste equal to 0.5% bonus mana`,
+        passive_description : `Grants ability power equal to 1% bonus mana`,
         passive2_name : 'Mana charge',
         passive2_description : `Grants a charge every 8 seconds up to 4 charges. Affecting an enemy or ally with an ability consumes a charge to gran 3 bonus mana,
                                 increased to 6 if they are a champion, up to a maximum of 360 bonus mana. At 360 bonus mana this item transforms into Seraph's Embrace.`,
@@ -1608,13 +1609,15 @@ export const league_of_legends_items = {
             ap : 80,
             mana : 860,
             hp : 250,
+            haste : 10,
         },
         mage : true,
         builds_from : ['archangels_staff'],
         passive_name : 'Awe',
-        passive_description : `Grants ability haste equal to 1.3% bonus mana`,
-        passive2_name : 'Empyrean',
-        passive2_description : `Heal for 25% of mana spent, up to 25 - 50(based on level)(+10% AP) per cast. Toggle abilities heal for the same amount per seconds.`,
+        passive_description : `Grants ability power equal to 2.5% bonus mana`,
+        passive2_name : 'Lifeline',
+        passive2_description : `Upon taking damage that would reduce your Health below 30%, gain a 250(+20% current Mana) shield.`,
+        passive2_cooldown : 90,
     },
 
     phantom_dancer : {
@@ -1794,9 +1797,9 @@ export const league_of_legends_items = {
         legendary : true,
         name : "Winter's Approach",
         id : 3119,
-        price : 2700,
+        price : 2600,
         stats : {
-            hp : 350,
+            hp : 400,
             mana : 500,
             haste : 15,
         },
@@ -1817,7 +1820,7 @@ export const league_of_legends_items = {
         id : 3121,
         price : 'N/A',
         stats : {
-            hp : 350,
+            hp : 400,
             mana : 860,
             haste : 15,
         },
@@ -2194,7 +2197,7 @@ export const league_of_legends_items = {
         id : 4628,
         price : 3000,
         stats : {
-            ap : 85,
+            ap : 100,
             hp : 150,
             haste : 15,
         },
@@ -2301,7 +2304,7 @@ export const league_of_legends_items = {
         price : 3000,
         stats : {
             ad : 55,
-            lethality : 10,
+            lethality : 18,
             haste : 25,
         },
         assasin : true,
