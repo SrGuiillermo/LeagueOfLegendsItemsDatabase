@@ -339,7 +339,7 @@ export const league_of_legends_items = {
         stats : {
             ad : 80,
             lethality : 20,
-            '%omnivamp' : 0.08,
+            haste : 20,
         },
         assasin : true,
         bruiser : true,
@@ -347,9 +347,9 @@ export const league_of_legends_items = {
         passive_name : 'Ever Rising Moon',
         passive_description : `Hitting a champion with 2 separate Attacks or Abilities within 1.5 seconds deals an additional 
                                6% max Health physical damage [Melee champion] / 3% max Health physical damage [Ranged champion], 
-                               grants you 15% Move Speed and a (180 + 40% bonus Attack Damage) shield (50% shield for ranged champions) for 2 seconds.`,
-        passive_melee_cooldown : 8,
-        passive_ranged_cooldown : 16,
+                               grants you 15% Move Speed and a (180 + 40% bonus Attack Damage) shield (50% shield for ranged champions) for 2 seconds.
+                               Ever Rising Moon's cooldown is halved for melee champions.`,
+        passive_cooldown : 12,
         mythic_stats : {
             ms : 5,
             '%armor_pen' : 0.04,
@@ -959,17 +959,17 @@ export const league_of_legends_items = {
         stats : {
             ad : 60,
             lethality : 12,
-            '%omnivamp' : 0.07,
+            haste : 15,
         },
         assasin : true,
         bruiser : true,
-        builds_from : ['serrated_dirk', 'long_sword', 'vampiric_scepter'],
+        builds_from : ['serrated_dirk', 'cauldfields_warhammer'],
         passive_name : 'Ever Rising Moon',
         passive_description : `Hitting a champion with 2 separate Attacks or Abilities within 1.5 seconds deals an additional 
                                6% max Health physical damage [Melee champion] / 3% max Health physical damage [Ranged champion], 
-                               grants you 15% Move Speed and a (180 + 40% bonus Attack Damage) shield (50% shield for ranged champions) for 2 seconds.`,
-        passive_melee_cooldown : 8,
-        passive_ranged_cooldown : 16,
+                               grants you 15% Move Speed and a (180 + 40% bonus Attack Damage) shield (50% shield for ranged champions) for 2 seconds.
+                               Ever Rising Moon's cooldown is halved for melee champions.`,
+        passive_cooldown : 12,
         mythic_stats : {
             ms : 5,
             '%armor_pen' : 0.04,
@@ -1151,7 +1151,8 @@ export const league_of_legends_items = {
                               for each enemy hit. Cooldown is reduced by ability haste.`,
         active_cooldown : 15,
         mythic_stats : {
-            haste : 7,
+            haste : 3,
+            hp : 50,
         },
     },
     
@@ -1335,16 +1336,15 @@ export const league_of_legends_items = {
         id : 3011,
         price : 2300,
         stats : {
-            ap : 60,
-            haste : 20,
+            ap : 40,
+            haste : 15,
             '%mana_regen' : 1,
+            '%hspower' : 0.08,
         },
         mage : true,
-        builds_from : ['oblivion_orb', 'bandleglass_mirror'],
+        builds_from : ['oblivion_orb', 'forbidden_idol'],
         passive_name : 'Puffcap toxin',
-        passive_description : `Dealing magic damage to enemy champions inflicts them with 25% Grievous Wounds for 3 seconds. Healing or shielding allied champions
-                               (excluding yourself) empowers your and their next instance of damage of damage against enemy champions within 5 seconds to apply 40%
-                               Grievous Wounds for 3 seconds.`,
+        passive_description : `Dealing damage to enemy champions inflicts them with 40% Grievous Wounds for 3 seconds.`,
     },
 
     redemption : {
@@ -1489,19 +1489,16 @@ export const league_of_legends_items = {
         legendary : true,
         name : 'Mortal Reminder',
         id : 3033,
-        price : 2500,
+        price : 3000,
         stats : {
             ad : 35,
-            '%as': 0.20,
+            '%amor_pen' : 0.3,
             '%crit' : 0.2,
-            '%ms' : 0.07,
         },
         marksman : true,
-        builds_from : ['executioners_calling', 'zeal'],
+        builds_from : ['executioners_calling', 'last_whisper', 'cloack_of_agility'],
         passive_name : 'Sepsis',
-        passive_description : `Dealing physical damage to enemy champions inflicts them with 25% Grievous Wounds for 3 seconds. Basic attacking a champion 2 times
-                               while they remain affected by Grievous Wounds increases their effect to 40%, and dealing physical damage to a target affected by
-                               40% Grievous Wounds will refresh the empowered effect.`,
+        passive_description : `Dealing physical damage to enemy champions inflicts them with 40% Grievous Wounds for 3 seconds.`,
     },
 
     rapid_firecannon : {
@@ -1544,16 +1541,16 @@ export const league_of_legends_items = {
         legendary : true,
         name : 'Morellonomicon',
         id : 3165,
-        price : 2500,
+        price : 3000,
         stats : {
             ap : 90,
-            hp : 300,
+            hp : 200,
+            magic_pen : 10,
         },
         mage : true,
-        builds_from : ['blasting_wand', 'oblivion_orb', 'ruby_crystal'],
+        builds_from : ['oblivion_orb', 'hextech_alternator', 'amplifying_tome'],
         passive_name : 'Affliction',
-        passive_description : `Dealing magic damage to enemy champions inflicts them with 25% Grievous Wounds for 3 seconds, 
-                               increased to 40% if the target is below 50% of their maximum health`,
+        passive_description : `Dealing magic damage to enemy champions inflicts them with 40% Grievous Wounds for 3 seconds.`,
     },
 
     anathemas_chains : {
@@ -1740,8 +1737,7 @@ export const league_of_legends_items = {
         assasin : true,
         builds_from : ['executioners_calling', 'ruby_crystal', 'cauldfields_warhammer'],
         passive_name : 'Hackshorn',
-        passive_description : `Dealing physical damage to enemy champions inflicts them with 25% Grievous Wounds for 3 seconds, increased to 40%
-                               if the target is below 50% of their maximum health.`,
+        passive_description : `Dealing physical damage to enemy champions inflicts them with 40% Grievous Wounds for 3 seconds.`,
     },
 
     serpents_fang : {
@@ -1771,8 +1767,8 @@ export const league_of_legends_items = {
         tank : true,
         builds_from : ['bramble_vest', 'giants_belt'],
         passive_name : 'Thorns',
-        passive_description : `When struck by a basic attack, deal 10(+20% bonus armor) magic damage to the attacker and, if they are a champion, inflict them with
-                               25% Grievous Wounds for 3 seconds. Immobilizing enemy champions also inflict them with 40% Grievous Wounds for 3 seconds.`,
+        passive_description : `When struck by a basic attack, deal 10(+25% bonus armor) magic damage to the attacker and, if they are a champion, inflict them with
+                               40% Grievous Wounds for 3 seconds.`,
     },
 
     stormrazor : {
@@ -1933,9 +1929,9 @@ export const league_of_legends_items = {
         legendary : true,
         name : 'Essence Reaver',
         id : 3508,
-        price : 2800,
+        price : 2900,
         stats : {
-            ad : 45,
+            ad : 55,
             '%crit' : 0.2,
             haste : 20,
         },
@@ -2025,7 +2021,8 @@ export const league_of_legends_items = {
         builds_from : ['hexdrinker', 'cauldfields_warhammer'],
         passive_name : 'Lifeline',
         passive_description : `If you would take magic damage that would reduce you below 30% of your maximum health, you first gain a shield
-                               that absorbs 200 (+225% bonus AD)[Melee champion] / 150 (+168.75% bonus AD)[Ranged champion] magic damage for 5 seconds.
+                               that absorbs 200 (+225% bonus AD)[Melee champion] / 150 (+168.75% bonus AD)[Ranged champion] magic damage for 5 seconds
+                               and grants 12% life steal for 5 seconds that refreshes when taking or dealing damage.
                                Limited to 1 Lifeline item.`,
         passive_cooldown : 75,
     },
@@ -2090,7 +2087,7 @@ export const league_of_legends_items = {
         id : 3036,
         price : 3000,
         stats : {
-            ad : 30,
+            ad : 35,
             '%crit' : 0.2,
             '%armor_pen' : 0.30,
         },
@@ -2241,7 +2238,7 @@ export const league_of_legends_items = {
         passive_name : 'Dark pact',
         passive_description : `Gain ability power equal to 2% bonus health.`,
         passive2_name : 'Azakana Gaze',
-        passive2_description : `Dealing ability damage curses enemies, causing them to take 1.8% [Melee champion] / 0.8% [Ranged champion] of their
+        passive2_description : `Dealing ability damage curses enemies, causing them to take 1.6% [Melee champion] / 1% [Ranged champion] of their
                                 maximum health as magic damage per second for 4 seconds.`,
     },
 
@@ -2337,8 +2334,8 @@ export const league_of_legends_items = {
         id : 3071,
         price : 3100,
         stats : {
-            ad : 45,
-            hp : 350,
+            ad : 50,
+            hp : 400,
             haste : 30,
         },
         bruiser : true,
@@ -2412,8 +2409,8 @@ export const league_of_legends_items = {
         price : 3400,
         stats : {
             ad : 65,
-            haste : 20,
-            '%omnivamp' : 0.09,
+            haste : 25,
+            '%life_steal' : 0.1,
         },
         bruiser : true,
         marksman : true,
@@ -2442,12 +2439,12 @@ export const league_of_legends_items = {
         marksman : true,
         builds_from : ['vampiric_scepter', 'recurve_bow', 'pickaxe'],
         passive_name : "Mist's edge",
-        passive_description : `Basic attacks deal bonus physical damage on-hit equal to 12% [Melee champion] / 8% [Ranged champion] of the target's
+        passive_description : `Basic attacks deal bonus physical damage on-hit equal to 12% [Melee champion] / 9% [Ranged champion] of the target's
                                current health, with a minimum of 15 against all units and a maximum of 60 against minions and monsters.`,
         passive2_name : 'Siphon',
-        passive2_description : `Auto attacking a champion 3 times within 6 seconds each deal 40 - 150(based on level) bonus magic damage on-hit and slow
+        passive2_description : `Auto attacking a champion 3 times within 6 seconds each deal 40 - 103(based on level) bonus magic damage on-hit and slow
                                 the target by 25% for 2 seconds, while also granting you 25% bonus movement speed for the same duration.`,
-        passive2_cooldown : 20,
+        passive2_cooldown : 30,
     },
 
     titanic_hydra : {
@@ -2476,21 +2473,20 @@ export const league_of_legends_items = {
         id : 6333,
         price : 3300,
         stats : {
-            ad : 55,
-            armor : 45,
-            haste : 15,
+            ad : 65,
+            armor : 50,
         },
         bruiser : true,
         marksman : true,
         assasin : true,
-        builds_from : ['pickaxe', 'chain_vest', 'cauldfields_warhammer'],
+        builds_from : ['pickaxe', 'chain_vest', 'pickaxe'],
         passive_name : 'Ignore pain',
         passive_description : `Stores 30% [Melee champion] / 10% [Ranged champion] of all post-mitigation physical and magic damage received,
                                including on shields, which is sucessively taken as true damage over 3 seconds instead, dealing a third of the
                                stored damage each second.`,
         passive2_name : 'Defy',
         passive2_description : `If an enemy champion dies within 3 seconds of you damaging them, removes ignores Pain's remaining stored damage
-                                and heals you for 120% bonus AD over 2 seconds.`,
+                                and heals you for 50% bonus AD over 2 seconds.`,
     },
 
     infinity_edge : {
@@ -2505,7 +2501,7 @@ export const league_of_legends_items = {
         marksman : true,
         builds_from : ['b_f_sword', 'pickaxe', 'cloack_of_agility'],
         passive_name : 'Perfection',
-        passive_description : `Gain 35% bonus critical strike damage if you have at least 60% critical strike chance. Unique with Guinsoo's Rageblade
+        passive_description : `Gain 35% bonus critical strike damage if you have at least 40% critical strike chance. Unique with Guinsoo's Rageblade
                                and Navori Quickblades.`,
     },
 
@@ -2513,16 +2509,16 @@ export const league_of_legends_items = {
         legendary : true,
         name : 'Bloodthirster',
         id : 3072,
-        price : 3400,
+        price : 3200,
         stats : {
             ad : 55,
             '%crit' : 0.2,
-            '%life_steal' : 0.18,
+            '%life_steal' : 0.15,
         },
         marksman : true,
         builds_from : ['b_f_sword', 'cloack_of_agility', 'vampiric_scepter'],
         passive_name : 'Ichorshield',
-        passive_description : `Convert the healing received from life steal in excess of maximum health into a shield for up to 50 - 320(based on level),
+        passive_description : `Convert the healing received from life steal in excess of maximum health into a shield for up to 180 - 450(based on level),
                                which slowly decays after not dealing or taking damage for 25 seconds.`,
     },
 
@@ -2539,7 +2535,7 @@ export const league_of_legends_items = {
         marksman : true,
         builds_from : ['cauldfields_warhammer', 'pickaxe', 'cloack_of_agility'],
         passive_name : 'Transcendance',
-        passive_description : `If you have at least 60% critical strike chance, basic attacks on-hit reduce your basic abilities's current cooldowns
+        passive_description : `If you have at least 40% critical strike chance, basic attacks on-hit reduce your basic abilities's current cooldowns
                                by 15% of their remaining cooldowns. Unique with Infinity Edge and Guinsoo's Rageblade. Unique with Spear of Shojin.`,
         passive2_name : 'Impermanence',
         passive2_description : `Your ability damage is increased by 0% - 20%(based on critical strike chance).`,
@@ -2805,8 +2801,8 @@ export const league_of_legends_items = {
         builds_into : ['thornmail'],
         builds_from : ['cloth_armor', 'cloth_armor'],
         passive_name : 'Thorns',
-        passive_description : `When struck by a basic attack on-hit, deal 4 magic damage to the attacker and, if they are a champion, inflict
-                               them with 25% Grievous Wounds for 3 seconds.`,
+        passive_description : `When struck by a basic attack on-hit, deal 6 magic damage to the attacker and, if they are a champion, inflict
+                               them with 40% Grievous Wounds for 3 seconds.`,
     },
 
     forbidden_idol : {
@@ -2819,7 +2815,7 @@ export const league_of_legends_items = {
             '%hspower' : 0.08,
         },
         support : true,
-        builds_into : ['redemption', 'mikaels_blessing', 'ardent_censer', 'staff_of_the_flowing_water'],
+        builds_into : ['redemption', 'mikaels_blessing', 'ardent_censer', 'staff_of_the_flowing_water', 'chemtech_putrifier'],
         builds_from : ['faerie_charm'],
     },
 
@@ -2829,14 +2825,14 @@ export const league_of_legends_items = {
         id : 3123,
         price : 800,
         stats : {
-            ad : 20,
+            ad : 15,
         },
         bruiser : true,
         marksman : true,
         builds_into : ['mortal_reminder', 'chempunk_chainsword'],
         builds_from : ['long_sword'],
         passive_name : 'Rend',
-        passive_description : `Dealing physical damage to enemy champions inflict them with 25% Grievous Wounds for 3 seconds.`,
+        passive_description : `Dealing physical damage to enemy champions inflict them with 40% Grievous Wounds for 3 seconds.`,
     },
 
     crystalline_bracer : {
@@ -2860,14 +2856,14 @@ export const league_of_legends_items = {
         id : 3916,
         price : 800,
         stats :  {
-            ap : 35,
+            ap : 30,
         },
         mage : true,
         support : true,
         builds_into : ['chemtech_putrifier', 'morellonomicon'],
         builds_from : ['amplifying_tome'],
         passive_name : 'Cursed',
-        passive_description : `Dealing magic damage to enemy champions inflicts them with 25% Grievous Wounds for 3 seconds.`,
+        passive_description : `Dealing magic damage to enemy champions inflicts them with 40% Grievous Wounds for 3 seconds.`,
     },
 
     rageknife : {
@@ -2928,7 +2924,7 @@ export const league_of_legends_items = {
         marksman : true,
         bruiser : true,
         assasin : true,
-        builds_into : ['bloodthirster', 'ravenous_hydra', 'blade_of_the_ruined_king', 'immortal_shieldbow', 'eclipse'],
+        builds_into : ['bloodthirster', 'ravenous_hydra', 'blade_of_the_ruined_king', 'immortal_shieldbow'],
         builds_from : ['long_sword'],
     },
 
@@ -2987,7 +2983,7 @@ export const league_of_legends_items = {
             '%mana_regen' : 0.5,
         },
         support : true,
-        builds_into : ['shurelyas_battlesong', 'chemtech_putrifier', 'imperial_mandate', 'moonstone_renewer'],
+        builds_into : ['shurelyas_battlesong', 'imperial_mandate', 'moonstone_renewer'],
         builds_from : ['faerie_charm', 'amplifying_tome'],
     },
 
@@ -3083,7 +3079,7 @@ export const league_of_legends_items = {
             '%crit' : 0.15,
         },
         marksman : true,
-        builds_into : ['mortal_reminder', 'phantom_dancer', 'runaans_hurricane', 'rapid_firecannon'],
+        builds_into : ['phantom_dancer', 'runaans_hurricane', 'rapid_firecannon'],
         builds_from : ['cloack_of_agility', 'dagger'],
         passive_name : 'Zealous',
         passive_description : `Gain 7% bonus movement speed.`,
@@ -3099,7 +3095,7 @@ export const league_of_legends_items = {
             hp : 150,
         },
         mage : true,
-        builds_into : ['hextech_rocketbelt', 'horizon_focus', 'night_harvester', 'shadowflame'],
+        builds_into : ['hextech_rocketbelt', 'horizon_focus', 'night_harvester', 'shadowflame', 'morellonomicon'],
         builds_from : ['amplifying_tome', 'ruby_crystal'],
         passive_name : 'Revved',
         passive_description : `Damaging an enemy champion deals 50 - 125(based on level) bonus magic damage.`,
@@ -3135,9 +3131,9 @@ export const league_of_legends_items = {
         marksman : true,
         bruiser : true,
         assasin : true,
-        builds_into : ['axiom_arc', 'black_cleaver', 'chempunk_chainsword', 'deaths_dance', 'divine_sunderer', 'duskblade_of_draktharr',
+        builds_into : ['axiom_arc', 'black_cleaver', 'chempunk_chainsword', 'divine_sunderer', 'duskblade_of_draktharr',
                        'essence_reaver', 'goredrinker', 'manamune', 'maw_of_malmortius', 'navori_quickblades', 'prowlers_claw', 'ravenous_hydra',
-                       'seryldas_grudge', 'youmuus_ghostblade', 'spear_of_shojin'],
+                       'seryldas_grudge', 'youmuus_ghostblade', 'spear_of_shojin', 'eclipse'],
         builds_from : ['long_sword', 'long_sword'],
     },
 
@@ -3351,7 +3347,7 @@ export const league_of_legends_items = {
         bruiser : true,
         marksman : true,
         assasin  :true,
-        builds_into : ['lord_dominiks_regards', 'seryldas_grudge'],
+        builds_into : ['lord_dominiks_regards', 'seryldas_grudge', 'mortal_reminder'],
         builds_from : ['long_sword', 'long_sword'],
     },
 
@@ -3534,7 +3530,7 @@ export const league_of_legends_items = {
         bruiser : true,
         marksman : true,
         assasin : true,
-        builds_into : ['black_cleaver', 'cauldfields_warhammer', 'eclipse', 'edge_of_night', 'executioners_calling', 'hearthbound_axe', 'hexdrinker',
+        builds_into : ['black_cleaver', 'cauldfields_warhammer', 'edge_of_night', 'executioners_calling', 'hearthbound_axe', 'hexdrinker',
                        'last_whisper', 'manamune', 'noonquiver', 'phage', 'phantom_dancer', 'serrated_dirk', 'umbral_glaive', 'vampiric_scepter'],
     },
 
@@ -3552,7 +3548,7 @@ export const league_of_legends_items = {
         support : true,
         assasin : true,
         builds_into : ['bamis_cinder', 'catalyst_of_aeons', 'chempunk_chainsword', 'cosmic_drive', 'crystalline_bracer', 'dead_mans_plate', 'edge_of_night', 
-                       'force_of_nature', 'giants_belt', 'hextech_alternator', 'jaksho', 'kindlegem', 'leeching_leer', 'morellonomicon', 'phage',  
+                       'force_of_nature', 'giants_belt', 'hextech_alternator', 'jaksho', 'kindlegem', 'leeching_leer', 'phage',  
                        'radiant_virtue', 'silvermere_dawn', 'spectres_cowl', 'steraks_gage', 'titanic_hydra', 'turbo_chemtank', 'winged_moonplate', 
                        'winters_approach',],
     },
@@ -3570,7 +3566,7 @@ export const league_of_legends_items = {
         builds_into : ['aether_wisp', 'ardent_censer', 'bandleglass_mirror', 'blighting_jewel', 'crown_of_the_shattered_queen', 'demonic_embrace',
                        'everfrost', 'fiendish_codex', 'hextech_alternator', 'hextech_rocketbelt', 'leeching_leer', 'lost_chapter', 'nashors_tooth',
                        'night_harvester', 'oblivion_orb', 'rylais_crystal_scepter', 'seekers_armguard', 'staff_of_the_flowing_water', 'verdant_barrier',
-                       'rod_of_ages'],
+                       'rod_of_ages', 'morellonomicon'],
     },
 
     null_magic_mantle : {
@@ -3603,7 +3599,7 @@ export const league_of_legends_items = {
         assasin : true,
         bruiser : true,
         builds_into : ['bloodthirster', 'essence_reaver', 'galeforce', 'guinsoos_rageblade', 'immortal_shieldbow', 'infinity_edge', 'kraken_slayer',
-                       'lord_dominiks_regards', 'mercurial_scimitar', 'navori_quickblades', 'stormrazor', 'the_collector', 'zeal'],
+                       'lord_dominiks_regards', 'mercurial_scimitar', 'navori_quickblades', 'stormrazor', 'the_collector', 'zeal', 'mortal_reminder'],
     },
 
     stopwatch : {
@@ -3631,7 +3627,7 @@ export const league_of_legends_items = {
             ap : 40,
         },
         mage : true,
-        builds_into : ['archangels_staff', 'demonic_embrace', 'hextech_rocketbelt', 'ludens_tempest', 'morellonomicon', 'nashors_tooth', 'riftmaker',
+        builds_into : ['archangels_staff', 'demonic_embrace', 'hextech_rocketbelt', 'ludens_tempest', 'nashors_tooth', 'riftmaker',
                        'rylais_crystal_scepter', 'void_staff', 'rod_of_ages'],
     },
 
