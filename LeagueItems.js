@@ -50,7 +50,7 @@
 //      mythic_stats : {},                       --> Mythics stats bonuses for each legendary item, with the same format as de stats above
 // }
 //
-// PATCH 12.23
+// PATCH 13.3
 
 export const league_of_legends_items = {
     shurelyas_requiem : {
@@ -862,7 +862,7 @@ export const league_of_legends_items = {
         mythic : true,
         name : 'Radiant Value',
         id : 6667,
-        price : 3000,
+        price : 3200,
         stats : {
             hp : 400,
             armor : 30,
@@ -873,10 +873,10 @@ export const league_of_legends_items = {
         support : true,
         builds_from : ['aegis_of_the_legion', 'kindlegem', 'ruby_crystal'],
         passive_name : 'Guiding light',
-        passive_description : `Upon casting your ultimate, you transcend for 9 seconds. While transcended, increase your maximum health by 10% and cause you
-                               and all allies within 1200 units to gain 20 basic ability haste and heal for 2% of your maximum health upen you becoming transcended
-                               and 3 seconds thereafter. Ally healing is increased by 0% - 100% (based on target's missing health).`,
-        passive_cooldown : 60,
+        passive_description : `Upon casting your ultimate, you transcend for 9 seconds. While transcended, increase your maximum health by 15% and cause you
+                               and all allies within 1200 units to heal for 3% of your maximum health upen you becoming transcended and 3 seconds 
+                               thereafter (total heal 12% max. health). Ally healing is increased by 0% - 100% (based on target's missing health).`,
+        passive_cooldown : 90,
         mythic_stats : {
             hp : 100,
         },
@@ -1405,8 +1405,8 @@ export const league_of_legends_items = {
         builds_from : ['long_sword', 'serrated_dirk', 'long_sword'],
         passive_name : 'Blackout',
         passive_description : `When near an enemy stealthed ward or trap, disable them and reveal them for 8 seconds (400 range). 
-                               Your basic attacks instantly kill traps and wards.`,
-        passive_cooldown : 40,
+                               Your basic attacks will deal 3 true damage to wards (2 true damage for rangeds champions).`,
+        passive_cooldown : 50,
     },
 
     mikaels_blessing : {

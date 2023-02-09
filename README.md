@@ -1,6 +1,6 @@
 # LeagueOfLegendsItemsDatabase
 A simple .js League items database \
-PATCH 13.1B
+PATCH 13.3
 
 
 This database contains all League of Legends items's stats, passives, actives and everything in a .js file. The items are written the following way:
