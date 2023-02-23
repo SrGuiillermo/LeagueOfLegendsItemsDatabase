@@ -2676,7 +2676,7 @@ export const league_of_legends_items = {
         stats : {
             ap : 40,
             hp : 75,
-            '%mana_regen' : 1.15,
+            '%mana_regen' : 1,
             gold : 0.3,
         },
         support : true,
@@ -3359,7 +3359,7 @@ export const league_of_legends_items = {
         stats : {
             ad : 6,
             hp : 100,
-            '%hp_regen' : 0.5,
+            '%hp_regen' : 0.75,
             gold : 0.3,
         },
         support : true,
@@ -3384,7 +3384,7 @@ export const league_of_legends_items = {
         stats : {
             ap : 15,
             hp : 100,
-            '%hp_regen' : 0.5,
+            '%hp_regen' : 0.75,
             gold : 0.3,
         },
         support : true,
@@ -3409,7 +3409,7 @@ export const league_of_legends_items = {
         stats : {
             ap : 15,
             hp : 70,
-            '%mana_regen' : 0.75,
+            '%mana_regen' : 0.5,
             gold : 0.3,
         },
         support : true,
@@ -3419,7 +3419,7 @@ export const league_of_legends_items = {
         active_description : `Consumes a charge to place a Stealth Ward at the target location, which grants sight of the surrounding area.
                               Charges refill upon visiting the shop. 3 charges. Limited to 1 support / jungle item.`,
         passive_name : 'Tribute',
-        passive_description : `Grants a charge every 10 seconds, up to 3 charges. If an allied champion is within 2000 units,
+        passive_description : `Grants a charge every 12 seconds, up to 3 charges. If an allied champion is within 2000 units,
                                damaging basic attacks and abilities against champions and structures consume a charge up to one
                                per attack or cast. Consuming a charge grants 20 gold. Receive diminishing gold from excessive minion kills.`,
         passive2_name : 'Quest',
@@ -3444,7 +3444,7 @@ export const league_of_legends_items = {
         active_description : `Consumes a charge to place a Stealth Ward at the target location, which grants sight of the surrounding area.
                               Charges refill upon visiting the shop. 3 charges. Limited to 1 support / jungle item.`,
         passive_name : 'Tribute',
-        passive_description : `Grants a charge every 10 seconds, up to 3 charges. If an allied champion is within 2000 units,
+        passive_description : `Grants a charge every 12 seconds, up to 3 charges. If an allied champion is within 2000 units,
                                damaging basic attacks and abilities against champions and structures consume a charge up to one
                                per attack or cast. Consuming a charge grants 20 gold. Receive diminishing gold from excessive minion kills.`,
         passive2_name : 'Quest',
@@ -3749,13 +3749,13 @@ export const league_of_legends_items = {
         stats : {
             ap : 8,
             hp : 10,
-            '%mana_regen' : 0.5,
+            '%mana_regen' : 0.25,
             gold : 0.2,
         },
         support : true,
         builds_into : ['frostfang'],
         passive_name : 'Tribute',
-        passive_description : `Grants a charge every 10 seconds, up to 3 charges. If an allied champion is within 2000 units,
+        passive_description : `Grants a charge every 12 seconds, up to 3 charges. If an allied champion is within 2000 units,
                                damaging basic attacks and abilities against champions and structures consume a charge up to one
                                per attack or cast. Consuming a charge grants 20 gold. Receive diminishing gold from excessive minion kills.`,
         passive2_name : 'Quest',
@@ -3792,7 +3792,7 @@ export const league_of_legends_items = {
         stats : {
             ap : 5,
             hp : 30,
-            '%hp_regen' : 0.25,
+            '%hp_regen' : 0.5,
             gold : 0.2,
         },
         support : true,
@@ -3820,7 +3820,7 @@ export const league_of_legends_items = {
         mage : true,
         builds_into : ['harrowing_crescent'],
         passive_name : 'Tribute',
-        passive_description : `Grants a charge every 10 seconds, up to 3 charges. If an allied champion is within 2000 units,
+        passive_description : `Grants a charge every 12 seconds, up to 3 charges. If an allied champion is within 2000 units,
                                damaging basic attacks and abilities against champions and structures consume a charge up to one
                                per attack or cast. Consuming a charge grants 20 gold. Receive diminishing gold from excessive minion kills.`,
         passive2_name : 'Quest',
@@ -3834,7 +3834,7 @@ export const league_of_legends_items = {
         price : 400,
         stats : {
             hp : 80,
-            hp_regen : 1.2,
+            hp_regen : 0.8,
         },
         tank : true,
         bruiser : true,
