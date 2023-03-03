@@ -50,7 +50,7 @@
 //      mythic_stats : {},                       --> Mythics stats bonuses for each legendary item, with the same format as de stats above
 // }
 //
-// PATCH 13.3
+// PATCH 13.4
 
 export const league_of_legends_items = {
     shurelyas_requiem : {
