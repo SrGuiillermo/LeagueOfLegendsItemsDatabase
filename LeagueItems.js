@@ -50,7 +50,7 @@
 //      mythic_stats : {},                       --> Mythics stats bonuses for each legendary item, with the same format as de stats above
 // }
 //
-// PATCH 13.5
+// PATCH 13.6
 
 export const league_of_legends_items = {
     shurelyas_requiem : {
@@ -2137,14 +2137,15 @@ export const league_of_legends_items = {
         legendary : true,
         name : "Nashor's Tooth",
         id : 3115,
-        price : 3000,
+        price : 3200,
         stats : {
             ap : 100,
             '%as': 0.5,
+            haste : 15,
         },
         mage : true,
         bruiser : true,
-        builds_from : ['recurve_bow', 'blasting_wand', 'amplifying_tome'],
+        builds_from : ['recurve_bow', 'blasting_wand', 'fiendish_codex'],
         passive_name : 'Icathian bite',
         passive_description : `Basic attacks deal 15(+20% AP) bonus magic damage on-hit.`,
     },
@@ -2517,7 +2518,7 @@ export const league_of_legends_items = {
         marksman : true,
         builds_from : ['b_f_sword', 'cloack_of_agility', 'vampiric_scepter'],
         passive_name : 'Ichorshield',
-        passive_description : `Convert the healing received from life steal in excess of maximum health into a shield for up to 180 - 450(based on level),
+        passive_description : `Convert the healing received from life steal in excess of maximum health into a shield for up to 100 - 400(based on level),
                                which slowly decays after not dealing or taking damage for 25 seconds.`,
     },
 
@@ -2535,7 +2536,7 @@ export const league_of_legends_items = {
         builds_from : ['cauldfields_warhammer', 'pickaxe', 'cloack_of_agility'],
         passive_name : 'Transcendance',
         passive_description : `If you have at least 40% critical strike chance, basic attacks on-hit reduce your basic abilities's current cooldowns
-                               by 15% of their remaining cooldowns. Unique with Infinity Edge and Guinsoo's Rageblade. Unique with Spear of Shojin.`,
+                               by 12% of their remaining cooldowns. Unique with Infinity Edge and Guinsoo's Rageblade. Unique with Spear of Shojin.`,
         passive2_name : 'Impermanence',
         passive2_description : `Your ability damage is increased by 0% - 20%(based on critical strike chance).`,
     },
@@ -2967,7 +2968,7 @@ export const league_of_legends_items = {
             haste : 10,
         },
         mage : true,
-        builds_into : ['lich_bane', 'banshees_veil', 'zhonyas_hourglass', 'horizon_focus', 'cosmic_drive', 'liandrys_anguish', 'night_harvester'],
+        builds_into : ['lich_bane', 'banshees_veil', 'zhonyas_hourglass', 'horizon_focus', 'cosmic_drive', 'liandrys_anguish', 'night_harvester', 'nashors_tooth'],
         builds_from : ['amplifying_tome'],
     },
 
@@ -3563,8 +3564,8 @@ export const league_of_legends_items = {
         mage : true,
         support : true,
         builds_into : ['aether_wisp', 'ardent_censer', 'bandleglass_mirror', 'blighting_jewel', 'crown_of_the_shattered_queen', 'demonic_embrace',
-                       'everfrost', 'fiendish_codex', 'hextech_alternator', 'hextech_rocketbelt', 'leeching_leer', 'lost_chapter', 'nashors_tooth',
-                       'night_harvester', 'oblivion_orb', 'rylais_crystal_scepter', 'seekers_armguard', 'staff_of_the_flowing_water', 'verdant_barrier',
+                       'everfrost', 'fiendish_codex', 'hextech_alternator', 'hextech_rocketbelt', 'leeching_leer', 'lost_chapter', 'night_harvester', 
+                       'oblivion_orb', 'rylais_crystal_scepter', 'seekers_armguard', 'staff_of_the_flowing_water', 'verdant_barrier',
                        'rod_of_ages', 'morellonomicon', 'cosmic_drive'],
     },
 
