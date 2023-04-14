@@ -50,7 +50,7 @@
 //      mythic_stats : {},                       --> Mythics stats bonuses for each legendary item, with the same format as de stats above
 // }
 //
-// PATCH 13.4
+// PATCH 13.5
 
 export const league_of_legends_items = {
     shurelyas_requiem : {
@@ -1581,7 +1581,7 @@ export const league_of_legends_items = {
         id : 3003,
         price : 3000,
         stats : {
-            ap : 80,
+            ap : 70,
             mana : 500,
             hp : 200,
             haste : 10,
@@ -1603,9 +1603,9 @@ export const league_of_legends_items = {
         id : 3040,
         price : 'N/A',
         stats : {
-            ap : 80,
+            ap : 70,
             mana : 860,
-            hp : 250,
+            hp : 200,
             haste : 10,
         },
         mage : true,
@@ -2211,13 +2211,12 @@ export const league_of_legends_items = {
         id : 4629,
         price : 3000,
         stats : {
-            ap : 65,
-            hp : 200,
+            ap : 90,
             haste : 30,
             '%ms' : 0.05,
         },
         mage : true,
-        builds_from : ['fiendish_codex', 'aether_wisp', 'ruby_crystal'],
+        builds_from : ['fiendish_codex', 'aether_wisp', 'amplifying_tome'],
         passive_name : 'Spelldance',
         passive_description : `After dealing 3 instances of damage to champions within 3 seconds, gain 15% bonus movement speed, decaying to 5% over 2 seconds,
                                and 40 ability power for 5 seconds, refreshing on damage dealt to champions.`,
@@ -3547,7 +3546,7 @@ export const league_of_legends_items = {
         bruiser : true,
         support : true,
         assasin : true,
-        builds_into : ['bamis_cinder', 'catalyst_of_aeons', 'chempunk_chainsword', 'cosmic_drive', 'crystalline_bracer', 'dead_mans_plate', 'edge_of_night', 
+        builds_into : ['bamis_cinder', 'catalyst_of_aeons', 'chempunk_chainsword', 'crystalline_bracer', 'dead_mans_plate', 'edge_of_night', 
                        'force_of_nature', 'giants_belt', 'hextech_alternator', 'jaksho', 'kindlegem', 'leeching_leer', 'phage',  
                        'radiant_virtue', 'silvermere_dawn', 'spectres_cowl', 'steraks_gage', 'titanic_hydra', 'turbo_chemtank', 'winged_moonplate', 
                        'winters_approach',],
@@ -3566,7 +3565,7 @@ export const league_of_legends_items = {
         builds_into : ['aether_wisp', 'ardent_censer', 'bandleglass_mirror', 'blighting_jewel', 'crown_of_the_shattered_queen', 'demonic_embrace',
                        'everfrost', 'fiendish_codex', 'hextech_alternator', 'hextech_rocketbelt', 'leeching_leer', 'lost_chapter', 'nashors_tooth',
                        'night_harvester', 'oblivion_orb', 'rylais_crystal_scepter', 'seekers_armguard', 'staff_of_the_flowing_water', 'verdant_barrier',
-                       'rod_of_ages', 'morellonomicon'],
+                       'rod_of_ages', 'morellonomicon', 'cosmic_drive'],
     },
 
     null_magic_mantle : {
