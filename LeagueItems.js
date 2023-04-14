@@ -50,7 +50,7 @@
 //      mythic_stats : {},                       --> Mythics stats bonuses for each legendary item, with the same format as de stats above
 // }
 //
-// PATCH 13.6
+// PATCH 13.7
 
 export const league_of_legends_items = {
     shurelyas_requiem : {
@@ -1858,7 +1858,7 @@ export const league_of_legends_items = {
         id : 8020,
         price : 3000,
         stats : {
-            hp : 500,
+            hp : 550,
             mr : 40,
             haste : 10,
             mana : 300,
@@ -2473,13 +2473,14 @@ export const league_of_legends_items = {
         id : 6333,
         price : 3300,
         stats : {
-            ad : 65,
-            armor : 50,
+            ad : 55,
+            haste: 15,
+            armor : 45,
         },
         bruiser : true,
         marksman : true,
         assasin : true,
-        builds_from : ['pickaxe', 'chain_vest', 'pickaxe'],
+        builds_from : ['pickaxe', 'chain_vest', 'cauldfields_warhammer'],
         passive_name : 'Ignore pain',
         passive_description : `Stores 30% [Melee champion] / 10% [Ranged champion] of all post-mitigation physical and magic damage received,
                                including on shields, which is sucessively taken as true damage over 3 seconds instead, dealing a third of the
@@ -2690,9 +2691,9 @@ export const league_of_legends_items = {
         epic : true,
         name : 'Catalyst of Aeons',
         id : 3803,
-        price : 1100,
+        price : 1300,
         stats : {
-            hp : 225,
+            hp : 300,
             mana : 300,
         },
         mage : true,
@@ -3133,7 +3134,7 @@ export const league_of_legends_items = {
         assasin : true,
         builds_into : ['axiom_arc', 'black_cleaver', 'chempunk_chainsword', 'divine_sunderer', 'duskblade_of_draktharr',
                        'essence_reaver', 'goredrinker', 'manamune', 'maw_of_malmortius', 'navori_quickblades', 'prowlers_claw', 'ravenous_hydra',
-                       'seryldas_grudge', 'youmuus_ghostblade', 'spear_of_shojin', 'eclipse'],
+                       'seryldas_grudge', 'youmuus_ghostblade', 'spear_of_shojin', 'eclipse', 'deaths_dance'],
         builds_from : ['long_sword', 'long_sword'],
     },
 
