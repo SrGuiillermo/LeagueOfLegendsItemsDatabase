@@ -50,7 +50,7 @@
 //      mythic_stats : {},                       --> Mythics stats bonuses for each legendary item, with the same format as de stats above
 // }
 //
-// PATCH 13.7
+// PATCH 13.8
 
 export const league_of_legends_items = {
     shurelyas_requiem : {
@@ -2212,15 +2212,15 @@ export const league_of_legends_items = {
         id : 4629,
         price : 3000,
         stats : {
-            ap : 90,
+            ap : 100,
             haste : 30,
             '%ms' : 0.05,
         },
         mage : true,
         builds_from : ['fiendish_codex', 'aether_wisp', 'amplifying_tome'],
         passive_name : 'Spelldance',
-        passive_description : `After dealing 3 instances of damage to champions within 3 seconds, gain 15% bonus movement speed, decaying to 5% over 2 seconds,
-                               and 40 ability power for 5 seconds, refreshing on damage dealt to champions.`,
+        passive_description : `Damaging a champion generates a stack of 2.5% Movement Speed every 1.5 seconds for the next 5 seconds up to 4 stacks. At 4 stacks
+                               gain an additional 10% Movement Speed. Dealing damage refreshes this effect.`,
     },
 
     demonic_embrace : {
