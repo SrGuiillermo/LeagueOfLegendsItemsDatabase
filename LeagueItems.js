@@ -59,7 +59,7 @@ export const league_of_legends_items = {
         id : 7020,
         price : 2500,
         stats : {
-            ap : 70,
+            ap : 65,
             hp : 300,
             haste : 25,
             '%mana_regen' : 2,
@@ -71,7 +71,7 @@ export const league_of_legends_items = {
         active_description : 'Grants nearby allies 30% Move Speed for 4 seconds.',
         active_cooldown : 75,
         passive_name : 'Motivate',
-        passive_description : 'Healing, shielding or buffing allied champions (excluding yourself) grants you and them 25% Move Speed for 1.5 seconds.',
+        passive_description : 'Healing, shielding or buffing allied champions (excluding yourself) grants you and them 20% Move Speed for 1.5 seconds.',
         mythic_stats : {
             haste : 5,
         },
@@ -111,37 +111,14 @@ export const league_of_legends_items = {
         },
         tank : true,
         support : true,
-        builds_from : ['kindlegem', 'aegis_of_the_legion'],
+        builds_from : ['lifewell_pendant', 'null_magic_mantle'],
         active_name : 'Devotion',
-        active_description : `Grant nearby allies within 850 radius a 180 - 330 (based on target's level) Shield, decaying over 2.5 seconds.`,
+        active_description : `Grant nearby allies within 850 radius a 200 - 360 (based on target's level) Shield, decaying over 2.5 seconds.`,
         active_cooldown : 90,
         passive_name : 'Consecrate',
         passive_description : 'Grant allied champions within 850 radius 3 bonus armor and 3 bonus magic resist.',
         mythic_stats : {
             custom : '2 Armor and Magic Resist increase to Consecrate.',
-        },
-    },
-    
-    seat_of_command : {
-        ornn : true,
-        name : 'Seat of Command',
-        id : 7022,
-        price : 2500,
-        stats : {
-            ap : 70,
-            hp : 400,
-            haste : 25,
-            '%mana_regen' : 2,
-        },
-        support : true,
-        builds_from : ['kindlegem', 'bandleglass_mirror'],
-        passive_name : 'Coordinated Fire',
-        passive_description : `Abilities that Slow or Immobilize a champion deal 45 - 75 (based on level) bonus magic damage and marks them
-                               for 4 seconds. Ally champion damage detonates the mark, dealing an additional 90 - 150 
-                               (based on ally level) magic damage and granting you both 20% Move Speed for 2 seconds.`,
-        passive_cooldown : 6,
-        mythic_stats : {
-            ap : 15,
         },
     },
     
@@ -151,7 +128,7 @@ export const league_of_legends_items = {
         id : 7021,
         price : 2500,
         stats : {
-            ap : 70,
+            ap : 65,
             hp : 300,
             haste : 25,
             '%mana_regen' : 2,
@@ -159,11 +136,36 @@ export const league_of_legends_items = {
         support : true,
         builds_from : ['kindlegem', 'bandleglass_mirror'],
         passive_name : 'Starlit Grace',
-        passive_description : `When affecting champions with attacks or abilities in combat, heal 60 health to the most wounded nearby ally.
-                               Each second spent in combat with champions increases your Heal and Shield Power by 5% (stacking up to 4 times for 20%).`,
-        passive_cooldown : 2,
+        passive_description : `Healing or shielding an allied champion chains the effect to the other nearest champion within 
+                               800 units of them 20% - 35%(based on ally's level) of the heal or 30% - 40%(based on ally's level) of the shield.
+                               If no other allied champions are in the radius, grant the same target an additional 15% - 25%(based on ally's level)
+                               of the heal or 20% - 30%(based on ally's level) of the shield.`,
         mythic_stats : {
-            custom : "8 increased health on Starlit Grace's heal.",
+            haste : 5,
+        },
+    },
+
+    cry_of_the_shrieking_city : {
+        mythic : true,
+        name : 'Cry of the Shrieking City',
+        id : 7033,
+        price : 2300,
+        stats : {
+            ap : 60,
+            haste : 20,
+            hp : 300,
+            '%mana_regen' : 2.25,
+        },
+        support : true,
+        builds_from : ['chalice_of_blessing', 'bandleglass_mirror'],
+        passive_name : 'Soulsiphon',
+        passive_description : `Damaging an enemy champion with a basic attack or ability damage grants a Soul Shard, up to 2. Healing or shielding an allied champion
+                               (excluding yourself) consumes all Soul Shards to heal them for 20-100(based on target's level) and deal 30-200(based on target's level)
+                               magic damage to the nearest enemy champion per shard.`,
+        passive2_name : 'Dissonance',
+        passive2_description : `Gain 3 ability power for every additional 25% base mana regeneration. Disables Harmony on your other items.`,
+        mythic_stats : {
+            haste : 5,
         },
     },
     
@@ -244,21 +246,21 @@ export const league_of_legends_items = {
         id : 7027,
         price : 3000,
         stats : {
-            hp : 550,
+            hp : 500,
             armor : 40,
             mr : 40,
-            haste : 25,
+            haste : 15,
         },
         tank : true,
         support : true,
-        builds_from : ['aegis_of_the_legion', 'kindlegem', 'ruby_crystal'],
+        builds_from : ['aegis_of_the_legion', 'giants_belt'],
         passive_name : 'Guiding light',
-        passive_description : `Upon casting your ultimate, you transcend for 9 seconds. While transcended, increase your maximum health by 10% and cause you
-                               and all allies within 1200 units to gain 20 basic ability haste and heal for 2% of your maximum health upen you becoming transcended
-                               and 3 seconds thereafter. Ally healing is increased by 0% - 100% (based on target's missing health).`,
-        passive_cooldown : 60,
+        passive_description : `Upon casting your ultimate, you transcend for 9 seconds. While transcended, increase your maximum health by 12.5% and cause you
+                               and all allies within 1200 units to heal for 2.5% of your maximum health upen you becoming transcended and 3 seconds 
+                               thereafter.`,
+        passive_cooldown : 90,
         mythic_stats : {
-            hp : 100,
+            hp : 75,
         },
     },
 
@@ -275,9 +277,9 @@ export const league_of_legends_items = {
         },
         tank : true,
         passive_name : 'Voidborn resilence',
-        passive_description : `For each second in combat with champions, gain 3 bonus armor and bonus magic resistance for 6 seconds, stacking up to 8 times
+        passive_description : `For each second in combat with champions, gain 2 bonus armor and bonus magic resistance for 6 seconds, stacking up to 8 times
                                for 24 bonus resistances. At maximum stacks instantly deal 3% maximum health magic damage to enemies within 700 units (2.1% against non-champions)
-                               heal for the same amount for each enemy damaged, and increase your total resistances by 15% until the end of combat.`,
+                               heal for the same amount for each enemy damaged, and increase your bonus resistances by 20% until the end of combat.`,
         mythic_stats : {
             armor : 5,
             mr : 5,
@@ -320,11 +322,10 @@ export const league_of_legends_items = {
         assasin : true,
         builds_from : ['serrated_dirk', 'cauldfields_warhammer'],
         passive_name : 'Nightstalker',
-        passive_description : `Attacking a champion deals an additional (75 + 30% bonus AD [Melee champion] / 
-                               55 + 25% bonus AD [Ranged champion]) physical damage. If dealt by a Melee champion, 
-                               this Attack also Slows the target by 99% for 0.25 seconds. When a champion that you have damaged within 
-                               the last 3 seconds dies, this cooldown is refreshed and you become Invisible for 1.5 seconds.`,
-        passive_cooldown : 15,
+        passive_description : `Your spells deal up to an additional 15% bonus damage based on the target's missing health.
+                               When a champion that you have damaged within the last 3 seconds dies, this cooldown is refreshed and 
+                               you become untargetable for non-structures for 1.5 seconds.`,
+        passive_cooldown : 10,
         mythic_stats : {
             ms : 5,
             haste : 5,
@@ -357,27 +358,28 @@ export const league_of_legends_items = {
 
     },
     
-    sandshrikes_claw : {
-        ornn : true,
-        name : "Sandshrike's Claw",
-        id : 7000,
+    youmuus_wake : {
+        mythic : true,
+        name : "Youmuu's Wake",
+        id : 7029,
         price : 3100,
         stats : {
             ad : 75,
-            lethality : 26,
-            haste : 25,
+            lethality : 25,
+            haste : 26,
         },
         assasin : true,
         builds_from : ['serrated_dirk', 'cauldfields_warhammer'],
-        active_name : 'Sandswipe',
-        active_description : `Dash through a targeted enemy champion (500 range). Upon completing the dash, deal 75 (+30% bonus AD) physical damage to the target
-                              and increase your damage dealt to them by 15% for the next 3 seconds.`,
-        active_cooldown : 90,
+        active_name : 'Wraith step',
+        active_description : `Gain 25% bonus movement speed and ghosting for 6 seconds.`,
+        active_cooldown : 45,
+        passive_name : 'Haunt',
+        passive_description : `Moving generates Spectral Shards (up to 100). For each stack gain 0.4 Movement Speed (maximum of 40 movement speed) out of combat. 
+                               At maximum stacks, gain 8-20 (based on level) lethality. These stacks reset 3 seconds after dealing damage to an enemy champion
+                               while at maximum stacks.`,
         mythic_stats : {
-            ms : 5,
-            lethality : 5,
+            ad : 7,
         },
-             
     },
     
     infinite_convergence : {
@@ -463,6 +465,7 @@ export const league_of_legends_items = {
         passive_name : 'Soulrend',
         passive_description : `Damaging an enemy champion deals 125 (+15% AP) bonus magic damage and grants you 25% bonus movement speed for 1.5 seconds,
                                with the duration extending on subsequent triggers. This item's cooldowns is per champion.`,
+        passive_cooldown : 30,
         mythic_stats : {
             haste : 5,
         },
@@ -517,7 +520,7 @@ export const league_of_legends_items = {
         ornn : true,
         name : 'Ceaseless Hunger',
         id : 7015,
-        price : 3300,
+        price : 3200,
         stats : {
             ad : 70,
             hp : 450,
@@ -531,7 +534,8 @@ export const league_of_legends_items = {
                               for each enemy hit. Cooldown is reduced by ability haste.`,
         active_cooldown : 15,
         mythic_stats : {
-            haste : 7,
+            haste : 3,
+            hp : 75,
         },
     },
     
@@ -541,7 +545,7 @@ export const league_of_legends_items = {
         id : 7016,
         price : 3300,
         stats : {
-            ad : 60,
+            ad : 70,
            '%as': 0.3,
             hp : 400,
             haste : 25,
@@ -572,8 +576,8 @@ export const league_of_legends_items = {
         bruiser : true,
         builds_from : ['cauldfields_warhammer', 'sheen', 'kindlegem'],
         passive_name : 'Spellblade',
-        passive_description : `After using an ability your next attack within 10 seconds deals (125% base AD + (6% of target's maximum health [Melee champion]
-                               3% of target's maximum health [Ranged champion])) as bonus physical damage on-hit and also heal for 55% of the premitigation damage.`,
+        passive_description : `After using an ability your next attack within 10 seconds deals (160% base AD + (4% of target's maximum health [Melee champion]
+                               2% of target's maximum health [Ranged champion])) as bonus physical damage on-hit and also heal for 55% of the premitigation damage.`,
         passive_cooldown : 1.5,
         mythic_stats : {
             '%armor_pen' : 0.03,
@@ -587,8 +591,8 @@ export const league_of_legends_items = {
         id : 7018,
         price : 3333,
         stats : {
-            ad : 45,
-           '%as': 0.4,
+            ad : 50,
+           '%as': 0.45,
             hp : 400,
             haste : 25,
         },
@@ -596,8 +600,8 @@ export const league_of_legends_items = {
         marksman : true,
         builds_from : ['sheen', 'hearthbound_axe', 'kindlegem'],
         passive_name : 'Threeforld Strike',
-        passive_description : `Basic attacks grant 20 bonus move speed for 3 seconds. If the target is a champion or a structure,
-                               increase base attack damage by 4% for 3 seconds, stacking up to 5 times for 20%. Stacks expire by one every 0.5 seconds
+        passive_description : `Basic attacks grant 20 bonus move speed for 5 seconds. If the target is a champion or a structure,
+                               increase base attack damage by 4% for 5 seconds, stacking up to 5 times for 20%. Stacks expire by one every 0.5 seconds
                                when the duration ends.`,
         passive2_name : 'Spellblade',
         passive2_description : `After using an ability, your next basic attack within 10 seconds deals (200% base AD) bonus physical damage on-hit.`,
@@ -616,60 +620,83 @@ export const league_of_legends_items = {
         id : 7006,
         price : 3400,
         stats : {
-            ad : 80,
-           '%as': 0.35,
+            ad : 70,
+            '%as': 0.30,
             '%crit' : 0.2,
+            '%ms' : 0.10,
         },
         marksman : true,
-        builds_from : ['noonquiver', 'cloack_of_agility', 'pickaxe'],
+        builds_from : ['b_f_sword', 'zeal', 'long_sword'],
         active_name : 'Cloudburst',
         active_description : `Dash 200-425 units to a targeted location and fire three homing missiles at the most wounded enemy within 750 units,
-                              dealing a total of 180-315 (based on level)(+45% bonus AD), increased by 0% - 50% based on target's missing health.`,
-        active_cooldown : 110,
-        mythic_stats : {
-            '%ms' : 0.02,
-        },
-    },
-    
-    wyrmfallen_sacrifice : {
-        ornn : true,
-        name : 'Wyrmfallen Sacrifice',
-        id : 7007,
-        price : 3400,
-        stats : {
-            ad : 85,
-           '%as': 0.4,
-            '%crit' : 0.2,
-        },
-        marksman : true,
-        builds_from : ['noonquiver', 'cloack_of_agility', 'pickaxe'],
-        passive_name : 'Bring it down',
-        passive_description : `Every third attack deal 50 (+40% bonus AD) true damage on-hit.`,
-        mythic_stats : {
-            '%as' : 0.1,
-        },
-    },
-    
-    bloodward : {
-        ornn : true,
-        name : 'Bloodward',
-        id : 7008,
-        price : 3400,
-        stats : {
-            ad : 65,
-           '%as': 0.3,
-            '%crit' : 0.2,
-            '%life_steal' : 0.08,
-        },
-        marksman : true,
-        builds_from : ['noonquiver', 'cloack_of_agility', 'vampiric_scepter'],
-        passive_name : 'Lifeline',
-        passive_description : `If you would take damage that would reduce you below 30% of your maximum health, you first gain a shield that absorbs 250 - 630 (based on level)
-                               damage for 3 seconds and 15 - 35 (based on level) bonus attack damage for 8 seconds. Limited to 1 Lifeline item.`,
-        passive_cooldown : 90,
+                              dealing a total of 150-350 (based on level)(+250% critical strike chance), increased by 0% - 60% based on target's missing health.`,
+        active_cooldown : 90,
         mythic_stats : {
             ad : 5,
-            hp : 70,
+        }
+    },
+
+    seething_sorrow : {
+        ornn : true,
+        name : "Seething Sorrow",
+        id : 7030,
+        price : 3200,
+        stats : {
+            ap : 50,
+            ad : 40,
+            '%as' : 0.35,
+        },
+        marksman : true,
+        bruiser : true,
+        builds_from : ['amplifying_tome', 'rageknife', 'pickaxe'],
+        passive_name : 'Wrath',
+        passive_description : `Basic attacks deal 30 bonus magic damage on-hit. Convert every 1% critical strike chance into 1.5 bonus magic damage on-hit, 
+                               capped at 100% critical strike chance, for a maximum of 180 bonus magic damage on-hit. This damage is affected by critical 
+                               strike modifiers.`,
+        passive2_name : 'Seething strike',
+        passive2_description : `Basic attacks grant 8% bonus attacks speed for 3 seconds, stacking up to 4 times for a total of 32% bonus attack speed.
+                                At maximum stacks, every third attack applies on-hit effects twice.`,
+        mythic_stats : {
+            '%armor_pen' : 0.05,
+            '%magic_pen' : 0.06,
+        },
+    },
+
+    edge_of_finality : {
+        ornn : true,
+        name : 'Edge of Finality',
+        id : 7031,
+        price : 3400,
+        stats : {
+            ad : 100,
+            '%crit' : 0.2,
+            '%crit_dmg' : 0.35,
+        },
+        marksman : true,
+        builds_from : ['b_f_sword', 'pickaxe', 'cloack_of_agility'],
+        mythic_stats : {
+            ad : 5,
+        },
+    },
+
+    flicker : {
+        mythic : true,
+        name : 'Flicker',
+        id : 7032,
+        price : 3400,
+        stats : {
+            ad : 80,
+            '%crit' : 0.2,
+            haste : 30,
+        },
+        marksman : true,
+        builds_from : ['cauldfields_warhammer', 'pickaxe', 'cloack_of_agility'],
+        passive_name : 'Transcendance',
+        passive_description : `Basic attacks on-hit reduce your basic abilities's current cooldowns by 12% of their remaining cooldowns.`,
+        passive2_name : 'Impermanence',
+        passive2_description : `Your ability damage is increased by 0% - 20%(based on critical strike chance).`,
+        mythic_stats : {
+            haste : 5,
         },
     },
 
@@ -677,9 +704,9 @@ export const league_of_legends_items = {
         mythic : true,
         name : "Shurelya's Battlesong",
         id : 2065,
-        price : 2500,
+        price : 2300,
         stats : {
-            ap : 40,
+            ap : 35,
             hp : 200,
             haste : 20,
             '%mana_regen' : 1,
@@ -691,7 +718,7 @@ export const league_of_legends_items = {
         active_description : 'Grants nearby allies 30% Move Speed for 4 seconds.',
         active_cooldown : 75,
         passive_name : 'Motivate',
-        passive_description : 'Healing, shielding or buffing allied champions (excluding yourself) grants you and them 25% Move Speed for 1.5 seconds.',
+        passive_description : 'Healing, shielding or buffing allied champions (excluding yourself) grants you and them 20% Move Speed for 1.5 seconds.',
         mythic_stats : {
             haste : 5,
         },
@@ -701,7 +728,7 @@ export const league_of_legends_items = {
         mythic : true,
         name : 'Evenshroud',
         id : 3001,
-        price : 2500,
+        price : 2300,
         stats : {
             hp : 200,
             haste : 20,
@@ -709,7 +736,7 @@ export const league_of_legends_items = {
             mr : 30,
         },
         support : true,
-        builds_from : ['kindlegem', 'aegis_of_the_legion'],
+        builds_from : ['lifewell_pendant', 'null_magic_mantle'],
         passive_name : 'Coruscation',
         passive_description : 'After Immobilizing champions or being Immobilized, cause that target and all enemy Champions within 600 radius to take 10% increased damage for 5 seconds.',
         mythic_stats : {
@@ -722,7 +749,7 @@ export const league_of_legends_items = {
         mythic : true,
         name : 'Locket of the Iron Solari',
         id : 3190,
-        price : 2500,
+        price : 2300,
         stats : {
             hp : 200,
             haste : 20,
@@ -731,9 +758,9 @@ export const league_of_legends_items = {
         },
         tank : true,
         support : true,
-        builds_from : ['kindlegem', 'aegis_of_the_legion'],
+        builds_from : ['lifewell_pendant', 'null_magic_mantle'],
         active_name : 'Devotion',
-        active_description : `Grant nearby allies within 850 radius a 180 - 330 (based on target's level) Shield, decaying over 2.5 seconds.`,
+        active_description : `Grant nearby allies within 850 radius a 200 - 360 (based on target's level) Shield, decaying over 2.5 seconds.`,
         active_cooldown : 90,
         passive_name : 'Consecrate',
         passive_description : 'Grant allied champions within 850 radius 3 bonus armor and 3 bonus magic resist.',
@@ -742,36 +769,13 @@ export const league_of_legends_items = {
         },
     },
     
-    imperial_mandate : {
-        mythic : true,
-        name : 'Imperial Mandate',
-        id : 4005,
-        price : 2500,
-        stats : {
-            ap : 40,
-            hp : 200,
-            haste : 20,
-            '%mana_regen' : 1,
-        },
-        support : true,
-        builds_from : ['kindlegem', 'bandleglass_mirror'],
-        passive_name : 'Coordinated Fire',
-        passive_description : `Abilities that Slow or Immobilize a champion deal 45 - 75 (based on level) bonus magic damage and marks them
-                               for 4 seconds. Ally champion damage detonates the mark, dealing an additional 90 - 150 
-                               (based on ally level) magic damage and granting you both 20% Move Speed for 2 seconds.`,
-        passive_cooldown : 6,
-        mythic_stats : {
-            ap : 15,
-        },
-    },
-    
     moonstone_renewer : {
         mythic : true,
         name : 'Moonstone Renewer',
         id : 6617,
-        price : 2500,
+        price : 2300,
         stats : {
-            ap : 40,
+            ap : 35,
             hp : 200,
             haste : 20,
             '%mana_regen' : 1,
@@ -779,11 +783,36 @@ export const league_of_legends_items = {
         support : true,
         builds_from : ['kindlegem', 'bandleglass_mirror'],
         passive_name : 'Starlit Grace',
-        passive_description : `When affecting champions with attacks or abilities in combat, heal 60 health to the most wounded nearby ally.
-                               Each second spent in combat with champions increases your Heal and Shield Power by 5% (stacking up to 4 times for 20%).`,
-        passive_cooldown : 2,
+        passive_description : `Healing or shielding an allied champion chains the effect to the other nearest champion within 
+                               800 units of them 20% - 35%(based on ally's level) of the heal or 30% - 40%(based on ally's level) of the shield.
+                               If no other allied champions are in the radius, grant the same target an additional 15% - 25%(based on ally's level)
+                               of the heal or 20% - 30%(based on ally's level) of the shield.`,
         mythic_stats : {
-            custom : "8 increased health on Starlit Grace's heal.",
+            haste : 5,
+        },
+    },
+
+    echoes_of_helia : {
+        mythic : true,
+        name : 'Echoes of Helia',
+        id : 6620,
+        price : 2300,
+        stats : {
+            ap : 30,
+            haste : 15,
+            hp : 200,
+            '%mana_regen' : 1.25,
+        },
+        support : true,
+        builds_from : ['chalice_of_blessing', 'bandleglass_mirror'],
+        passive_name : 'Soulsiphon',
+        passive_description : `Damaging an enemy champion with a basic attack or ability damage grants a Soul Shard, up to 2. Healing or shielding an allied champion
+                               (excluding yourself) consumes all Soul Shards to heal them for 20-100(based on target's level) and deal 30-200(based on target's level)
+                               magic damage to the nearest enemy champion per shard.`,
+        passive2_name : 'Dissonance',
+        passive2_description : `Gain 3 ability power for every additional 25% base mana regeneration. Disables Harmony on your other items.`,
+        mythic_stats : {
+            haste : 5,
         },
     },
     
@@ -862,23 +891,23 @@ export const league_of_legends_items = {
         mythic : true,
         name : 'Radiant Value',
         id : 6667,
-        price : 3200,
+        price : 2700,
         stats : {
-            hp : 400,
+            hp : 350,
             armor : 30,
             mr : 30,
-            haste : 20,
+            haste : 10,
         },
         tank : true,
         support : true,
-        builds_from : ['aegis_of_the_legion', 'kindlegem', 'ruby_crystal'],
+        builds_from : ['aegis_of_the_legion', 'giants_belt'],
         passive_name : 'Guiding light',
-        passive_description : `Upon casting your ultimate, you transcend for 9 seconds. While transcended, increase your maximum health by 15% and cause you
-                               and all allies within 1200 units to heal for 3% of your maximum health upen you becoming transcended and 3 seconds 
-                               thereafter (total heal 12% max. health). Ally healing is increased by 0% - 100% (based on target's missing health).`,
+        passive_description : `Upon casting your ultimate, you transcend for 9 seconds. While transcended, increase your maximum health by 12.5% and cause you
+                               and all allies within 1200 units to heal for 2.5% of your maximum health upen you becoming transcended and 3 seconds 
+                               thereafter.`,
         passive_cooldown : 90,
         mythic_stats : {
-            hp : 100,
+            hp : 75,
         },
     },
 
@@ -926,6 +955,30 @@ export const league_of_legends_items = {
             '%size' : 0.06,
         },
     },
+
+    youmuus_ghostblade : {
+        mythic : true,
+        name : "Youmuu's Ghostblade",
+        id : 3142,
+        price : 3100,
+        stats : {
+            ad : 60,
+            lethality : 18,
+            haste : 20,
+        },
+        assasin : true,
+        builds_from : ['serrated_dirk', 'cauldfields_warhammer'],
+        active_name : 'Wraith step',
+        active_description : `Gain 25% bonus movement speed and ghosting for 6 seconds.`,
+        active_cooldown : 45,
+        passive_name : 'Haunt',
+        passive_description : `Moving generates Spectral Shards (up to 100). For each stack gain 0.4 Movement Speed (maximum of 40 movement speed) out of combat. 
+                               At maximum stacks, gain 8-20 (based on level) lethality. These stacks reset 3 seconds after dealing damage to an enemy champion
+                               while at maximum stacks.`,
+        mythic_stats : {
+            ad : 7,
+        },
+    },
     
     duskblade_of_draktharr : {
         mythic : true,
@@ -940,11 +993,10 @@ export const league_of_legends_items = {
         assasin : true,
         builds_from : ['serrated_dirk', 'cauldfields_warhammer'],
         passive_name : 'Nightstalker',
-        passive_description : `Attacking a champion deals an additional (75 + 30% bonus AD [Melee champion] / 
-                               55 + 25% bonus AD [Ranged champion]) physical damage. If dealt by a Melee champion, 
-                               this Attack also Slows the target by 99% for 0.25 seconds. When a champion that you have damaged within 
-                               the last 3 seconds dies, this cooldown is refreshed and you become Invisible for 1.5 seconds.`,
-        passive_cooldown : 15,
+        passive_description : `Your spells deal up to an additional 15% bonus damage based on the target's missing health.
+                               When a champion that you have damaged within the last 3 seconds dies, this cooldown is refreshed and 
+                               you become untargetable for non-structures for 1.5 seconds.`,
+        passive_cooldown : 10,
         mythic_stats : {
             ms : 5,
             haste : 5,
@@ -975,29 +1027,6 @@ export const league_of_legends_items = {
             '%armor_pen' : 0.04,
         },
 
-    },
-    
-    prowlers_claw : {
-        mythic : true,
-        name : "Prowler's Claw",
-        id : 6693,
-        price : 3100,
-        stats : {
-            ad : 60,
-            lethality : 18,
-            haste : 20,
-        },
-        assasin : true,
-        builds_from : ['serrated_dirk', 'cauldfields_warhammer'],
-        active_name : 'Sandswipe',
-        active_description : `Dash through a targeted enemy champion (500 range). Upon completing the dash, deal 75 (+30% bonus AD) physical damage to the target
-                              and increase your damage dealt to them by 15% for the next 3 seconds.`,
-        active_cooldown : 90,
-        mythic_stats : {
-            ms : 5,
-            lethality : 5,
-        },
-             
     },
     
     rod_of_ages : {
@@ -1137,7 +1166,7 @@ export const league_of_legends_items = {
         mythic : true,
         name : 'Goredrinker',
         id : 6630,
-        price : 3300,
+        price : 3200,
         stats : {
             ad : 55,
             hp : 300,
@@ -1152,7 +1181,7 @@ export const league_of_legends_items = {
         active_cooldown : 15,
         mythic_stats : {
             haste : 3,
-            hp : 50,
+            hp : 75,
         },
     },
     
@@ -1162,7 +1191,7 @@ export const league_of_legends_items = {
         id : 6631,
         price : 3300,
         stats : {
-            ad : 50,
+            ad : 60,
            '%as': 0.2,
             hp : 300,
             haste : 20,
@@ -1193,8 +1222,8 @@ export const league_of_legends_items = {
         bruiser : true,
         builds_from : ['cauldfields_warhammer', 'sheen', 'kindlegem'],
         passive_name : 'Spellblade',
-        passive_description : `After using an ability your next attack within 10 seconds deals (125% base AD + (6% of target's maximum health [Melee champion]
-                               3% of target's maximum health [Ranged champion])) as bonus physical damage on-hit and also heal for 55% of the premitigation damage.`,
+        passive_description : `After using an ability your next attack within 10 seconds deals (160% base AD + (4% of target's maximum health [Melee champion]
+                               2% of target's maximum health [Ranged champion])) as bonus physical damage on-hit and also heal for 55% of the premitigation damage.`,
         passive_cooldown : 1.5,
         mythic_stats : {
             '%armor_pen' : 0.03,
@@ -1208,8 +1237,8 @@ export const league_of_legends_items = {
         id : 3078,
         price : 3333,
         stats : {
-            ad : 35,
-           '%as': 0.3,
+            ad : 40,
+           '%as': 0.35,
             hp : 300,
             haste : 20,
         },
@@ -1217,8 +1246,8 @@ export const league_of_legends_items = {
         marksman : true,
         builds_from : ['sheen', 'hearthbound_axe', 'kindlegem'],
         passive_name : 'Threeforld Strike',
-        passive_description : `Basic attacks grant 20 bonus move speed for 3 seconds. If the target is a champion or a structure,
-                               increase base attack damage by 4% for 3 seconds, stacking up to 5 times for 20%. Stacks expire by one every 0.5 seconds
+        passive_description : `Basic attacks grant 20 bonus move speed for 5 seconds. If the target is a champion or a structure,
+                               increase base attack damage by 4% for 5 seconds, stacking up to 5 times for 20%. Stacks expire by one every 0.5 seconds
                                when the duration ends.`,
         passive2_name : 'Spellblade',
         passive2_description : `After using an ability, your next basic attack within 10 seconds deals (200% base AD) bonus physical damage on-hit.`,
@@ -1237,56 +1266,121 @@ export const league_of_legends_items = {
         id : 6671,
         price : 3400,
         stats : {
-            ad : 60,
-           '%as': 0.2,
+            ad : 55,
+            '%as': 0.15,
             '%crit' : 0.2,
+            '%ms' : 0.07,
         },
         marksman : true,
-        builds_from : ['noonquiver', 'cloack_of_agility', 'pickaxe'],
+        builds_from : ['b_f_sword', 'zeal', 'long_sword'],
         active_name : 'Cloudburst',
         active_description : `Dash 200-425 units to a targeted location and fire three homing missiles at the most wounded enemy within 750 units,
-                              dealing a total of 180-315 (based on level)(+45% bonus AD), increased by 0% - 50% based on target's missing health.`,
-        active_cooldown : 110,
+                              dealing a total of 150-350 (based on level)(+250% critical strike chance), increased by 0% - 60% based on target's missing health.`,
+        active_cooldown : 90,
         mythic_stats : {
-            '%ms' : 0.02,
-        },
+            ad : 5,
+        }
     },
     
-    kraken_slayer : {
+    guinsoos_rageblade : {
         mythic : true,
-        name : 'Kraken Slayer',
-        id : 6672,
+        name : "Guinsoo's Rageblade",
+        id : 3124,
+        price : 3200,
+        stats : {
+            ap : 30,
+            ad : 30,
+            '%as' : 0.25,
+        },
+        marksman : true,
+        bruiser : true,
+        builds_from : ['amplifying_tome', 'rageknife', 'pickaxe'],
+        passive_name : 'Wrath',
+        passive_description : `Basic attacks deal 30 bonus magic damage on-hit. Convert every 1% critical strike chance into 1.5 bonus magic damage on-hit, 
+                               capped at 100% critical strike chance, for a maximum of 180 bonus magic damage on-hit. This damage is affected by critical 
+                               strike modifiers.`,
+        passive2_name : 'Seething strike',
+        passive2_description : `Basic attacks grant 8% bonus attacks speed for 3 seconds, stacking up to 4 times for a total of 32% bonus attack speed.
+                                At maximum stacks, every third attack applies on-hit effects twice.`,
+        mythic_stats : {
+            '%armor_pen' : 0.05,
+            '%magic_pen' : 0.06,
+        },
+    },
+
+    infinity_edge : {
+        mythic : true,
+        name : 'Infinity Edge',
+        id : 3031,
         price : 3400,
         stats : {
-            ad : 65,
-           '%as': 0.25,
+            ad : 70,
             '%crit' : 0.2,
         },
         marksman : true,
-        builds_from : ['noonquiver', 'cloack_of_agility', 'pickaxe'],
-        passive_name : 'Bring it down',
-        passive_description : `Every third attack deal 50 (+40% bonus AD) true damage on-hit.`,
+        builds_from : ['b_f_sword', 'pickaxe', 'cloack_of_agility'],
+        passive_name : 'Perfection',
+        passive_description : `Gain 35% bonus critical strike damage if you have at least 40% critical strike chance. Unique with Guinsoo's Rageblade
+                               and Navori Quickblades.`,
         mythic_stats : {
-            '%as' : 0.1,
+            ad : 5,
         },
+    },
+
+    navori_quickblades : {
+        mythic : true,
+        name : 'Navori Quickblades',
+        id : 6675,
+        price : 3400,
+        stats : {
+            ad : 60,
+            '%crit' : 0.2,
+            haste : 20,
+        },
+        marksman : true,
+        builds_from : ['cauldfields_warhammer', 'pickaxe', 'cloack_of_agility'],
+        passive_name : 'Transcendance',
+        passive_description : `Basic attacks on-hit reduce your basic abilities's current cooldowns by 12% of their remaining cooldowns.`,
+        passive2_name : 'Impermanence',
+        passive2_description : `Your ability damage is increased by 0% - 20%(based on critical strike chance).`,
+        mythic_stats : {
+            haste : 5,
+        },
+    },
+
+    kraken_slayer : {
+        legendary : true,
+        name : 'Kraken Slayer',
+        id : 6672,
+        price : 3000,
+        stats : {
+            ad : 40,
+           '%as': 0.30,
+            '%crit' : 0.2,
+        },
+        marksman : true,
+        builds_from : ['noonquiver', 'cloack_of_agility', 'recurve_bow'],
+        passive_name : 'Bring it down',
+        passive_description : `Every third attack deal 20(+60% bonus AD)(+45% bonus AP) magic damage on-hit. Subsequent triggers on the same target within 6
+                               seconds increases this damage by 50%, up to a maximum of 100% increased damage.`
     },
     
     immortal_shieldbow : {
-        mythic : true,
+        legendary : true,
         name : 'Immortal Shieldbow',
         id : 6673,
-        price : 3400,
+        price : 3000,
         stats : {
             ad : 50,
-           '%as': 0.2,
             '%crit' : 0.2,
             '%life_steal' : 0.07,
         },
         marksman : true,
-        builds_from : ['noonquiver', 'cloack_of_agility', 'vampiric_scepter'],
+        builds_from : ['pickaxe', 'cloack_of_agility', 'vampiric_scepter'],
         passive_name : 'Lifeline',
-        passive_description : `If you would take damage that would reduce you below 30% of your maximum health, you first gain a shield that absorbs 250 - 630 (based on level)
-                               damage for 3 seconds and 15 - 35 (based on level) bonus attack damage for 8 seconds. Limited to 1 Lifeline item.`,
+        passive_description : `If you would take damage that would reduce you below 30% of your maximum health, you first gain a shield 
+                               that absorbs 215 - 500 (based on level) damage for 3 seconds and 30% bonus attack speed 
+                               for 8 seconds. Limited to 1 Lifeline item.`,
         passive_cooldown : 90,
         mythic_stats : {
             ad : 5,
@@ -1298,19 +1392,21 @@ export const league_of_legends_items = {
         legendary : true,
         name : 'Vigilant Wardstone',
         id : 4643,
-        price : 1100,
+        price : 2300,
         stats : {
-            hp : 150,
-            haste : 15,
+            hp : 250,
+            haste : 10,
+            '%mana_regen' : 0.50,
         },
         support : true,
         builds_from : ['watchful_wardstone'],
+        item_inherent : `Can only be purchased after completing a support quest.`,
         passive_name : 'Arcane cache',
         passive_description : `This item can store up to 3 purchased Control Wards.`,
         passive2_name : 'Behold',
         passive2_description : `You can put up to 4 stealth wards and 2 control wards.`,
         passive3_name : 'Blessing of Ixtal',
-        passive3_description : `Increases bonus attack damage, bonus health, ability power and ability haste by 12%.`,
+        passive3_description : `Increases bonus attack damage, bonus health, ability power and ability haste by 20%.`,
     },
 
     mejais_soulstealer : {
@@ -1334,12 +1430,12 @@ export const league_of_legends_items = {
         legendary : true,
         name : 'Chemtech Putrifier',
         id : 3011,
-        price : 2300,
+        price : 2100,
         stats : {
-            ap : 40,
+            ap : 35,
             haste : 15,
-            '%mana_regen' : 1,
-            '%hspower' : 0.08,
+            '%mana_regen' : 0.75,
+            '%hspower' : 0.10,
         },
         mage : true,
         builds_from : ['oblivion_orb', 'forbidden_idol'],
@@ -1353,16 +1449,17 @@ export const league_of_legends_items = {
         id : 3107,
         price : 2300,
         stats : {
-            '%hspower' : 0.16,
-            hp : 200,
-            haste : 15,
+            '%hspower' : 0.15,
+            hp : 250,
             '%mana_regen' : 1,
         },
         support : true,
-        builds_from : ['kindlegem', 'forbidden_idol'],
+        builds_from : ['chalice_of_blessing', 'forbidden_idol'],
+        passive_name : 'Harmony',
+        passive_description : `Gain 25% base health regeneration for every additional 25% base mana regeneration.`,
         active_name : 'Intervention',
         active_description : `Cast a beam of light to strike upon the target location after 2.5 seconds, granting true sight of the area for the duration.
-                              Allies within the area are healed for 180 - 340 (based on target's level) while enemy champions take 10% of target's maximum health
+                              Allies within the area are healed for 200 - 400 (based on target's level) while enemy champions take 10% of target's maximum health
                               as true damage. Can be used while dead. Intervention's heal is reduced by 50% if the target was affected by another Intervention in the last
                               12 seconds. Active has 5500 range.`,
         active_cooldown : 90,
@@ -1372,22 +1469,23 @@ export const league_of_legends_items = {
         legendary : true,
         name : "Knight's Vow",
         id : 3109,
-        price : 2300,
+        price : 2200,
         stats : {
-            hp : 400,
-            haste : 20,
-            '%hp_regen' : 2,
+            hp : 350,
+            armor : 25,
+            haste : 15,
+            '%hp_regen' : 1.25,
         },
         support : true,
         tank : true,
-        builds_from : ['crystalline_bracer', 'kindlegem', 'rejuvenation_bead'],
+        builds_from : ['lifewell_pendant', 'crystalline_bracer'],
         active_name : 'Pledge',
         active_description : `Designate the target allied champion as being Worthy, forming a tether between you and them. Champioons can only be designated
                               as Worthy by one Knight's Vow at a time. Active has 1250 range.`,
         active_cooldown : 60,
         passive_name : 'Sacrifice',
-        passive_cooldown : `While at 1250 units of your Worthy ally and above 30% of your maximum health, redirect 10% of the post-mitigation physical and magic damage
-                            they take to you as true damage and heal for 7% of the damage dealt by your Worthy ally to champions. If they are below 30% maximum health
+        passive_cooldown : `While at 1250 units of your Worthy ally and above 30% of your maximum health, redirect 10% of the pre-mitigation physical and magic damage
+                            they take to you as true damage and heal for 10% of the damage dealt by your Worthy ally to champions. If they are below 30% maximum health
                             redirect 20% damage instead.`,
     },
 
@@ -1415,16 +1513,17 @@ export const league_of_legends_items = {
         id : 3222,
         price : 2300,
         stats : {
-            '%hspower' : 0.16,
-            mr : 50,
-            haste : 15,
+            hp : 250,
+            '%hspower' : 0.15,
             '%mana_regen' : 1,
         },
         support : true,
-        builds_from : ['forbidden_idol', 'negatron_cloack'],
+        builds_from : ['chalice_of_blessing', 'forbidden_idol'],
+        passive_name : 'Harmony',
+        passive_description : `Gain 25% base health regeneration for every additional 25% base mana regeneration.`,
         active_name : 'Purify',
         active_description : `Remove all crowd control debuffs (except Airbone, Blind, Disarm, Ground, Nearsight and Suppression) from yourself or the target
-                              allied champion and heal for 100 - 180 (based on target's level)(650 range).`,
+                              allied champion and heal for 100 - 250 (based on target's level)(650 range).`,
         active_cooldown : 120,
     },
 
@@ -1432,34 +1531,55 @@ export const league_of_legends_items = {
         legendary : true,
         name : 'Ardent Censer',
         id : 3504,
-        price : 2300,
+        price : 2100,
         stats : {
-            ap : 60,
+            ap : 35,
             '%hspower' : 0.08,
-            '%mana_regen' : 1,
+            '%mana_regen' : 0.75,
+            '%ms' : 0.5,
         },
         support : true,
-        builds_from : ['amplifying_tome', 'forbidden_idol', 'amplifying_tome'],
+        builds_from : ['aether_wisp', 'forbidden_idol'],
         passive_name : 'Sanctify',
-        passive_description : `Healing or shielding allied champions (excluding yourself) enchances you and them for 6 seconds, granting 10% - 30% (based on target's level)
-                               bonus attack speed and 5 - 20 (based on target's level) bonus magic damage on-hit on basic attacks.`,
+        passive_description : `Healing or shielding allied champions (excluding yourself) enchances you and them for 6 seconds, granting 15% - 30% (based on target's level)
+                               bonus attack speed and 15 - 30 (based on target's level) bonus magic damage on-hit on basic attacks.`,
     },
 
     staff_of_the_flowing_water : {
         legendary : true,
         name : 'Staff of the Flowing Water',
         id : 6616,
+        price : 2100,
+        stats : {
+            ap : 35,
+            '%hspower' : 0.08,
+            '%mana_regen' : 0.75,
+            '%ms' : 0.05,
+        },
+        support : true,
+        builds_from : ['aether_wisp', 'forbidden_idol'],
+        passive_name : 'Rapids',
+        passive_description : `Healing or shielding allied champions (excluding yourself) grants you and them 30 - 45 (based on target's level) ability power and 
+                               20 ability haste for 4 seconds.`,
+    },
+
+    imperial_mandate : {
+        legendary : true,
+        name : 'Imperial Mandate',
+        id : 4005,
         price : 2300,
         stats : {
-            ap : 50,
-            '%hspower' : 0.08,
+            ap : 55,
+            haste : 20,
             '%mana_regen' : 1,
         },
         support : true,
-        builds_from : ['amplifying_tome', 'forbidden_idol', 'amplifying_tome'],
-        passive_name : 'Rapids',
-        passive_description : `Healing or shielding allied champions (excluding yourself) grants you and them 25 - 45 (based on target's level) ability power and 
-                               20 ability haste for 4 seconds.`,
+        builds_from : ['bandleglass_mirror', 'fiendish_codex'],
+        passive_name : 'Coordinated Fire',
+        passive_description : `Abilities that Slow or Immobilize a champion deal 35 - 75 (based on level) bonus magic damage and marks them
+                               for 4 seconds. Ally champion damage detonates the mark, dealing an additional 70 - 150 
+                               (based on ally level) magic damage and granting you both 20% Move Speed for 2 seconds.`,
+        passive_cooldown : 6,
     },
 
     zekes_convergence : {
@@ -1468,14 +1588,14 @@ export const league_of_legends_items = {
         id : 3050,
         price : 2400,
         stats : {
-            hp : 250,
-            armor : 35,
+            hp : 200,
+            armor : 45,
             mana : 250,
-            haste : 20,
+            haste : 15,
         },
         support : true,
         tank : true,
-        builds_from : ['kindlegem', 'glacial_buckler'],
+        builds_from : ['lifewell_pendant', 'glacial_buckler'],
         active_name : 'Conduit',
         active_description : `Designate the target allied champion as the Accomplice, forming a tether between you and them. Champioons can only be designated
                               as the Accomplice by one Zeke's Convergence at a time. Active has 1250 range.`,
@@ -1491,7 +1611,7 @@ export const league_of_legends_items = {
         id : 3033,
         price : 3000,
         stats : {
-            ad : 35,
+            ad : 40,
             '%amor_pen' : 0.3,
             '%crit' : 0.2,
         },
@@ -1505,18 +1625,20 @@ export const league_of_legends_items = {
         legendary : true,
         name : 'Rapid Firecannon',
         id : 3094,
-        price : 2500,
+        price : 3000,
         stats : {
-            '%as': 0.35,
+            ad : 30,
+            '%as': 0.15,
             '%crit' : 0.2,
             '%ms' : 0.07,
         },
         marksman : true,
-        builds_from : ['zeal', 'kircheis_shard'],
+        builds_from : ['long_sword','zeal', 'kircheis_shard'],
         passive_name : 'Energized',
         passive_description : `Moving and basic attacking generates Energize stacks, up to 100.`,
         passive2_name : 'Sharpshooter',
-        passive2_description : `When fully Energized, your next basic attack deals 120 bonus magic damage on-hit. Energized attacks gain 35% bonus range, capped at 150.`,
+        passive2_description : `When fully Energized, your next basic attack deals 60-140(based on level) bonus magic damage on-hit. 
+                                Energized attacks gain 35% bonus range, capped at 150.`,
     },
 
     frozen_heart : {
@@ -1621,15 +1743,15 @@ export const league_of_legends_items = {
         legendary : true,
         name : 'Phantom Dance',
         id : 3046,
-        price : 2600,
+        price : 2800,
         stats : {
             ad : 20,
-            '%as': 0.25,
+            '%as': 0.30,
             '%crit' : 0.2,
             '%ms' : 0.07,
         },
         marksman : true,
-        builds_from : ['long_sword', 'zeal', 'long_sword'],
+        builds_from : ['hearthbound_axe', 'zeal'],
         passive_name : 'Spectral Waltz',
         passive_description : `Basic attacks grant ghosting, 7% bonus movement speed and a stack of Spectral Waltz for 3 seconds, up to 4 stacks. While at 4 stacks
                                gain 30% bonus attack speed.`,
@@ -1639,17 +1761,39 @@ export const league_of_legends_items = {
         legendary : true,
         name : "Runaan's Hurricane",
         id : 3085,
-        price : 2600,
+        price : 2800,
         stats : {
-            '%as': 0.45,
+            '%as': 0.40,
             '%crit' : 0.2,
             '%ms' : 0.07,
         },
         marksman : true,
-        builds_from : ['dagger', 'zeal', 'dagger'],
-        passive_name : "Wind's Fury",
-        passive_description : `Basic attacks on-attack fire additional bolts at up to 2 enemies in front of you, each dealing 40% total AD physical damage. Bolts
+        builds_from : ['zeal', 'recurve_bow'],
+        passive_name : 'Peck',
+        passive_description : `Attack apply 30 magic damage on-hit.`,
+        passive2_name : "Wind's Fury",
+        passive2_description : `Basic attacks on-attack fire additional bolts at up to 2 enemies in front of you, each dealing 50% total AD physical damage. Bolts
                                apply on-hit effects at 100% effectiveness and are affected by critical strike modifiers. Can only be purchased on ranged champions.`,
+    },
+
+    statikk_shiv : {
+        legendary : true,
+        name : 'Statikk Shiv',
+        id : 3087,
+        price : 3000,
+        stats : {
+            ad : 45,
+            '%as' : 0.25,
+            '%crit' : 0.2,
+        },
+        marksman : true,
+        builds_from : ['noonquiver', 'cloack_of_agility', 'kircheis_shard'],
+        passive_name : 'Energized',
+        passive_description : `Moving and basic attacking generates Energized stacks, up to 100.`,
+        passive2_name : 'Electroshock',
+        passive2_description : `When fully Energized, your next basic attack deals 60-170(based on level)(+50% total AP) bonus magic damage, increased
+                                to 220% against minions. Energized attakcs bounce their additional effect to a target within 500 units, repeating
+                                from the new target to strike up to 6/9/12(levels 1/11/16) targets.`,
     },
 
     banshees_veil : {
@@ -1682,27 +1826,6 @@ export const league_of_legends_items = {
         builds_from : ['blasting_wand', 'giants_belt', 'amplifying_tome'],
         passive_name : 'Rimefrost',
         passive_description : `Dealing ability damage slows affected units by 30% for 1 second.`,
-    },
-
-    guinsoos_rageblade : {
-        legendary : true,
-        name : "Guinsoo's Rageblade",
-        id : 3124,
-        price : 2600,
-        stats : {
-            '%as': 0.45,
-            '%crit' : 0.2,
-        },
-        marksman : true,
-        bruiser : true,
-        builds_from : ['rageknife', 'cloack_of_agility', 'dagger'],
-        passive_name : 'Wrath',
-        passive_description : `Convert every 1% critical strike chance into 2 bonus physical damage on-hit, capped at 100% critical strike chance,
-                               for a maximum of 200 bonus physical damage on-hit. This damage is affected by critical strike modifiers. Unique with
-                               Infinity Edge and Navori Quickblades.`,
-        passive2_name : 'Seething strike',
-        passive2_description : `Basic attacks on-attack grant a stack for 6 seconds, up to 2 stacks. At 2 stacks the next basic attack consumes all stacks and 
-                                trigger on-hit effects to the target at 100% effectiveness after a 0.15 seconds delay`,
     },
 
     zhonyas_hourglass : {
@@ -1775,18 +1898,19 @@ export const league_of_legends_items = {
         legendary : true,
         name : 'Stormrazor',
         id : 3095,
-        price : 2700,
+        price : 3000,
         stats : {
-            ad : 45,
+            ad : 55,
             '%as': 0.15,
             '%crit' : 0.2,
         },
         marksman : true,
-        builds_from : ['b_f_sword', 'cloack_of_agility', 'kircheis_shard'],
+        builds_from : ['noonquiver' ,'cloack_of_agility', 'kircheis_shard'],
         passive_name : 'Energized',
         passive_description : `Moving and basic attacking generates Energize stacks, up to 100.`,
         passive2_name : 'Paralyze',
-        passive2_description : `When fully Energized, your next basic attack deals 120 bonus magic damage on-hit. Energized attacks slow by 75% for 0.5 seconds.`,
+        passive2_description : `When fully Energized, your next basic attack deals 25(+65% total AD)(+50% total AP) bonus magic damage on-hit. 
+                                Energized attacks grant 45% bonus move speed for 1 second.`,
     },
 
     winters_approach : {
@@ -1826,7 +1950,7 @@ export const league_of_legends_items = {
         passive_name : 'Awe',
         passive_description : `Grants bonus health equal to 8% maximum mana.`,
         passive2_name : 'Everlasting',
-        passive2_description : `Immobilizing, or slowing if you are melee, an enemy champion consumes 3% current mana to grant a 100 - 180(based on level)(+4.5% current mana)
+        passive2_description : `Immobilizing, or slowing if you are melee, an enemy champion grant a 100 - 180(based on level)(+4.5% current mana)
                                 shield for 3 seconds. If more than one enemy champion is within 1200 units the shield's strength is increased by 80%. Can only activate
                                 if you have greater than 20% maximum mana.`,
         passive2_cooldown : 8,
@@ -1856,21 +1980,17 @@ export const league_of_legends_items = {
         legendary : true,
         name : 'Abyssal Mask',
         id : 8020,
-        price : 3000,
+        price : 2400,
         stats : {
-            hp : 550,
-            mr : 40,
+            hp : 300,
+            mr : 60,
             haste : 10,
-            mana : 300,
         },
         tank : true,
-        builds_from : ['catalyst_of_aeons', 'spectres_cowl'],
-        passive_name : 'Eternity',
-        passive_description : `Restore mana equal to 8% of pre-mitigation damage taken from champions, and heal for an amount equal to 20% of mana spent up to 15 per cast.
-                               Toggled abilities can only heal for up to 15 per second.`,
-        passive2_name : 'Unmake',
-        passive2_description : `Enemy champions within 550 units of you become cursed, reducing their magic resistance by 5(+1.2% bonus health), capped at 25.
-                                Gain 9 bonus magir resistance per cursed enemy.`,
+        builds_from : ['kindlegem', 'negatron_cloack'],
+        passive_name : 'Unmake',
+        passive_description : `Enemy champions within 550 units of you become cursed, reducing their magic resistance by 5(+1.2% bonus health), capped at 25.
+                               Gain 9 bonus magir resistance per cursed enemy.`,
     },
 
     guardian_angel : {
@@ -1909,15 +2029,16 @@ export const league_of_legends_items = {
         legendary : true,
         name : 'Hullbreaker',
         id : 3181,
-        price : 2800,
+        price : 3000,
         stats : {
-            ad : 50,
+            ad : 60,
             hp : 400,
             '%hp_regen' : 1.5,
+            '%ms' : 0.05,
         },
         tank : true,
         bruiser : true,
-        builds_from : ['pickaxe', 'phage'],
+        builds_from : ['pickaxe', 'phage', 'winged_moonplate'],
         passive_name : 'Boarding part',
         passive_description : `While no allied champions are within 1400 units, gain 10 - 75 [Melee champion] / 5 - 37.5 [Ranged champion] (based on level)
                                bonus armor and magic resistance and 20% bonus basic damage against structures. Allied siege minions and super minions 
@@ -2009,7 +2130,7 @@ export const league_of_legends_items = {
         legendary : true,
         name : 'Maw of Malmortius',
         id : 3156,
-        price : 2900,
+        price : 2800,
         stats : {
             ad : 55,
             mr : 50,
@@ -2022,9 +2143,9 @@ export const league_of_legends_items = {
         passive_name : 'Lifeline',
         passive_description : `If you would take magic damage that would reduce you below 30% of your maximum health, you first gain a shield
                                that absorbs 200 (+225% bonus AD)[Melee champion] / 150 (+168.75% bonus AD)[Ranged champion] magic damage for 5 seconds
-                               and grants 12% life steal for 5 seconds that refreshes when taking or dealing damage.
+                               and grants 12% life steal for 2.5 seconds that refreshes when taking or dealing damage.
                                Limited to 1 Lifeline item.`,
-        passive_cooldown : 75,
+        passive_cooldown : 90,
     },
 
     dead_mans_plate : {
@@ -2067,18 +2188,18 @@ export const league_of_legends_items = {
         legendary : true,
         name : 'Force of Nature',
         id : 4401,
-        price : 2900,
+        price : 2800,
         stats : {
-            hp : 350,
-            mr : 70,
+            hp : 400,
+            mr : 60,
             '%ms' : 0.05,
         },
         tank: true,
         builds_from : ['negatron_cloack', 'ruby_crystal', 'winged_moonplate'],
         passive_name : 'Absorbs',
-        passive_description : `Taking magic damage grants a stack of Steadfast for 7 seconds, stacking up to 6 times. Being immobilized grants 2 stacks.`,
+        passive_description : `Taking magic damage grants a stack of Steadfast for 7 seconds, stacking up to 10 times. Being immobilized grants 2 stacks.`,
         passive2_name : 'Dissipate',
-        passive2_description : `While at 6 stacks of Steadfast, gain 10% bonus movements speed and reduce all incoming magic damage by 25%.`,
+        passive2_description : `While at 10 stacks of Steadfast, gain 10% bonus movements speed and 30 bonus magic resistance.`,
     },
 
     lord_dominiks_regards : {
@@ -2096,7 +2217,7 @@ export const league_of_legends_items = {
         builds_from : ['last_whisper', 'cloack_of_agility'],
         passive_name : 'Giant slayer',
         passive_description : `Deal 0% - 25% (based on maximum health difference)(maximum bonus at 2500 health difference) 
-                               bonus physical damage against enemy champions with greater maximum health than you. Limited to 1 Last Whisper item.`,
+                               bonus physical and magic damage against enemy champions with greater maximum health than you. Limited to 1 Last Whisper item.`,
     },
 
     warmogs_armor : {
@@ -2158,7 +2279,7 @@ export const league_of_legends_items = {
         stats : {
             ad : 40,
             '%crit' : 0.2,
-            mr : 40,
+            mr : 50,
         },
         bruiser : true,
         assasin : true,
@@ -2170,23 +2291,22 @@ export const league_of_legends_items = {
         active_cooldown : 90,
     },
 
-    youmuus_ghostblade : {
+    prowlers_claw : {
         legendary : true,
-        name : "Youmuu's Ghostblade",
-        id : 3142,
+        name : "Prowler's Claw",
+        id : 6693,
         price : 3000,
         stats : {
             ad : 55,
-            lethality : 18,
+            lethality : 15,
             haste : 15,
         },
         assasin : true,
         builds_from : ['serrated_dirk', 'cauldfields_warhammer'],
-        active_name : 'Wraith step',
-        active_description : `Gain 20% bonus movement speed and ghosting for 6 seconds.`,
-        active_cooldown : 45,
-        passive_name : 'Haunt',
-        passive_description : `Gain 40 bonus movement speed while out of combat.`,
+        passive_name : 'Sandswipe',
+        passive_description : `After dashing, blinking, or exiting stealth, your next attack on an enemy champion deals 85(+45% total AD) [Melee champion] / 
+                               65(+30% total AD) [Ranged champion]. Melee champions also slow by 99% for 0.5 seconds.`,
+        passive_cooldown : 10,
     },
 
     horizon_focus : {
@@ -2284,7 +2404,7 @@ export const league_of_legends_items = {
         stats : {
             ad : 55,
             '%crit' : 0.2,
-            lethality : 12,
+            lethality : 18,
         },
         marksman : true,
         builds_from : ['serrated_dirk', 'pickaxe', 'cloack_of_agility'],
@@ -2324,7 +2444,7 @@ export const league_of_legends_items = {
         passive_description : `Gain bonus attack damage equal to 50% base AD`,
         passive2_name : 'Lifeline',
         passive2_description : `If you would take damage that would reduce you below 30% of your maximum health, gain a shield equal to 80% of bonus health,
-                               that decays over 4.5 seconds. Limited to 1 Lifeline item.`,
+                               that decays over 4.5 seconds, 25% increased size and 30% tenacity. Limited to 1 Lifeline item.`,
         passive_cooldown : 60,
     },
 
@@ -2490,22 +2610,6 @@ export const league_of_legends_items = {
                                 and heals you for 50% bonus AD over 2 seconds.`,
     },
 
-    infinity_edge : {
-        legendary : true,
-        name : 'Infinity Edge',
-        id : 3031,
-        price : 3400,
-        stats : {
-            ad : 70,
-            '%crit' : 0.2,
-        },
-        marksman : true,
-        builds_from : ['b_f_sword', 'pickaxe', 'cloack_of_agility'],
-        passive_name : 'Perfection',
-        passive_description : `Gain 35% bonus critical strike damage if you have at least 40% critical strike chance. Unique with Guinsoo's Rageblade
-                               and Navori Quickblades.`,
-    },
-
     bloodthirster : {
         legendary : true,
         name : 'Bloodthirster',
@@ -2514,32 +2618,12 @@ export const league_of_legends_items = {
         stats : {
             ad : 55,
             '%crit' : 0.2,
-            '%life_steal' : 0.15,
+            '%life_steal' : 0.18,
         },
         marksman : true,
         builds_from : ['b_f_sword', 'cloack_of_agility', 'vampiric_scepter'],
-        passive_name : 'Ichorshield',
-        passive_description : `Convert the healing received from life steal in excess of maximum health into a shield for up to 100 - 400(based on level),
-                               which slowly decays after not dealing or taking damage for 25 seconds.`,
-    },
-
-    navori_quickblades : {
-        legendary : true,
-        name : 'Navori Quickblades',
-        id : 6675,
-        price : 3400,
-        stats : {
-            ad : 60,
-            '%crit' : 0.2,
-            haste : 20,
-        },
-        marksman : true,
-        builds_from : ['cauldfields_warhammer', 'pickaxe', 'cloack_of_agility'],
-        passive_name : 'Transcendance',
-        passive_description : `If you have at least 40% critical strike chance, basic attacks on-hit reduce your basic abilities's current cooldowns
-                               by 12% of their remaining cooldowns. Unique with Infinity Edge and Guinsoo's Rageblade. Unique with Spear of Shojin.`,
-        passive2_name : 'Impermanence',
-        passive2_description : `Your ability damage is increased by 0% - 20%(based on critical strike chance).`,
+        passive_name : 'Engorge',
+        passive_description : `While above 50% Health, gain an additional 10-40 Attack Damage (based on level).`,
     },
 
     rabadons_deathcap : {
@@ -2553,7 +2637,7 @@ export const league_of_legends_items = {
         mage : true,
         builds_from : ['needlessly_large_rod', 'needlessly_large_rod'],
         passive_name : 'Magical opus',
-        passive_description : `Increase your ability power by 35%.`,
+        passive_description : `Increase your ability power by 40%.`,
     },
 
     sunfire_aegis : {
@@ -2698,11 +2782,27 @@ export const league_of_legends_items = {
         },
         mage : true,
         tank : true,
-        builds_into : ['abyssal_mask', 'rod_of_ages'],
+        builds_into : ['rod_of_ages'],
         builds_from : ['ruby_crystal', 'sapphire_crystal'],
         passive_name : 'Eternity',
         passive_description : `Restore mana equal to 8% of pre-mitigation damage taken from champions, and heal for an amount
                                equal to 20% of mana spent, up to 15 per cast. Toggled abilities can only heal for up to 15 per second.`,
+    },
+
+    lifewell_pendant : {
+        epic : true,
+        name : 'Lifewell Pendant',
+        id : 3023,
+        price : 1050,
+        stats : {
+            haste : 5,
+            hp : 150,
+            armor : 25,
+        },
+        tank : true,
+        support : true,
+        builds_into : ['evenshroud', 'locket_of_the_iron_solari', 'knights_vow', 'zekes_convergence'],
+        builds_from : ['ruby_crystal', 'cloth_armor'],
     },
 
     kircheis_shard : {
@@ -2711,15 +2811,15 @@ export const league_of_legends_items = {
         id : 2015,
         price : 700,
         stats : {
-           '%as': 0.15,
+           ad : 15,
         },
         marksman : true,
-        builds_into : ['rapid_firecannon', 'stormrazor'],
-        builds_from : ['dagger'],
+        builds_into : ['rapid_firecannon', 'stormrazor', 'statikk_shiv'],
+        builds_from : ['long_sword'],
         passive_name : 'Energized',
         passive_description : `Moving and basic attacking generates Energize stacks, up to 100.`,
         passive2_name : 'Jolt',
-        passive2_description : `When fully Energized, your next basic attack deals 80 bonus magic damage on-hit.`,
+        passive2_description : `When fully Energized, your next basic attack deals 60 bonus magic damage on-hit.`,
     },
 
     sheen : {
@@ -2761,7 +2861,7 @@ export const league_of_legends_items = {
             hp : 150,
         },
         tank : true,
-        builds_into : ['dead_mans_plate', 'force_of_nature'],
+        builds_into : ['dead_mans_plate', 'force_of_nature', 'hullbreaker'],
         builds_from : ['ruby_crystal'],
         passive_name : 'Flight',
         passive_description : `Gain 5% bonus movement speed.`,
@@ -2782,10 +2882,10 @@ export const league_of_legends_items = {
         mage : true,
         tank : true,
         support : true,
-        builds_into : ['anathemas_chains', 'archangels_staff', 'black_cleaver', 'crown_of_the_shattered_queen', 'divine_sunderer', 'evenshroud',
-                       'everfrost', 'goredrinker', 'imperial_mandate', 'knights_vow', 'locket_of_the_iron_solari', 'moonstone_renewer', 'redemption',
-                       'shurelyas_battlesong', 'spirit_visage', 'stridebreaker', 'trinity_force', 'warmogs_armor', 'winters_approach', 'zekes_convergence',
-                       'radiant_virtue', 'jaksho', 'heartsteel', 'spear_of_shojin', 'iceborn_gaunlet'],
+        builds_into : ['anathemas_chains', 'archangels_staff', 'black_cleaver', 'crown_of_the_shattered_queen', 'divine_sunderer',
+                       'everfrost', 'goredrinker', 'moonstone_renewer', 'shurelyas_battlesong', 'spirit_visage', 'stridebreaker',
+                       'trinity_force', 'warmogs_armor', 'winters_approach', 'jaksho', 'heartsteel', 'spear_of_shojin', 'iceborn_gaunlet', 
+                       'abyssal_mask'],
         builds_from : ['ruby_crystal'],
     },
 
@@ -2818,6 +2918,23 @@ export const league_of_legends_items = {
         support : true,
         builds_into : ['redemption', 'mikaels_blessing', 'ardent_censer', 'staff_of_the_flowing_water', 'chemtech_putrifier'],
         builds_from : ['faerie_charm'],
+    },
+
+    chalice_of_blessing : {
+        epic : true,
+        name : 'Chalice of Blessing',
+        id : 3012,
+        price : 950,
+        stats :{
+            hp : 200,
+            '%mana_regen' : 0.50,
+        },
+        support : true,
+        builds_into : ['echoes_of_helia', 'redemption', 'mikaels_blessing'],
+        builds_from : ['ruby_crystal', 'faerie_charm'],
+        passive_name : 'Harmony',
+        passive_description : `Gain 25% base health regeneration for every additional 25% base mana regeneration.`,
+
     },
 
     executioners_calling : {
@@ -2871,7 +2988,7 @@ export const league_of_legends_items = {
         epic : true,
         name : 'Rageknife',
         id : 6677,
-        price : 800,
+        price : 1200,
         stats : {
            '%as': 0.25,
         },
@@ -2880,8 +2997,9 @@ export const league_of_legends_items = {
         builds_into : ['guinsoos_rageblade'],
         builds_from : ['dagger', 'dagger'],
         passive_name : 'Wrath',
-        passive_description : `Convert every 1% critical strike chance into 1.75 bonus physical damage on-hit, capped at 100% critical
-                               strike chance, for a maximum of 175 bonus physical damage on-hit. This item is affected by critical strike modifiers.`,
+        passive_description : `Basic attacks deal 20 bonus magic damage on-hit.`,
+        passive2_name : 'Seething strike',
+        passive2_description : `Basic attacks grant 5% bonus attacks speed for 3 seconds, stacking up to 3 times for a total of 15% bonus attack speed.`,
     },
 
     aether_wisp : {
@@ -2893,7 +3011,7 @@ export const league_of_legends_items = {
             ap : 30,
         },
         mage : true,
-        builds_into : ['lich_bane', 'cosmic_drive'],
+        builds_into : ['lich_bane', 'cosmic_drive', 'ardent_censer', 'staff_of_the_flowing_water'],
         builds_from : ['amplifying_tome'],
         passive_name : 'Glide',
         passive_description : `Gain 5% bonus movement speed.`,
@@ -2909,7 +3027,8 @@ export const league_of_legends_items = {
         },
         tank : true,
         mage : true,
-        builds_into : ['thornmail', 'warmogs_armor', 'rylais_crystal_scepter', 'titanic_hydra', 'demonic_embrace', 'anathemas_chains', 'heartsteel', 'randuins_omen'],
+        builds_into : ['thornmail', 'warmogs_armor', 'rylais_crystal_scepter', 'titanic_hydra', 'demonic_embrace', 'anathemas_chains', 'heartsteel', 
+                       'randuins_omen', 'radiant_virtue'],
         builds_from : ['ruby_crystal'],
     },
 
@@ -2939,7 +3058,7 @@ export const league_of_legends_items = {
         },
         tank : true,
         support : true,
-        builds_into : ['mikaels_blessing', 'force_of_nature', 'turbo_chemtank'],
+        builds_into : ['force_of_nature', 'turbo_chemtank', 'abyssal_mask'],
         builds_from : ['null_magic_mantle'],
     },
 
@@ -2969,7 +3088,8 @@ export const league_of_legends_items = {
             haste : 10,
         },
         mage : true,
-        builds_into : ['lich_bane', 'banshees_veil', 'zhonyas_hourglass', 'horizon_focus', 'cosmic_drive', 'liandrys_anguish', 'night_harvester', 'nashors_tooth'],
+        builds_into : ['lich_bane', 'banshees_veil', 'zhonyas_hourglass', 'horizon_focus', 'cosmic_drive', 'liandrys_anguish', 
+                       'night_harvester', 'nashors_tooth', 'imperial_mandate'],
         builds_from : ['amplifying_tome'],
     },
 
@@ -2984,7 +3104,7 @@ export const league_of_legends_items = {
             '%mana_regen' : 0.5,
         },
         support : true,
-        builds_into : ['shurelyas_battlesong', 'imperial_mandate', 'moonstone_renewer'],
+        builds_into : ['shurelyas_battlesong', 'imperial_mandate', 'moonstone_renewer', 'echoes_of_helia'],
         builds_from : ['faerie_charm', 'amplifying_tome'],
     },
 
@@ -2992,32 +3112,32 @@ export const league_of_legends_items = {
         epic : true,
         name : 'Recurve Bow',
         id : 1043,
-        price : 1000,
+        price : 700,
         stats : {
-           '%as': 0.25,
+           '%as': 0.15,
         },
         mage : true,
         marksman : true,
         bruiser : true,
-        builds_into : ['nashors_tooth', 'blade_of_the_ruined_king'],
-        builds_from : ['dagger', 'dagger'],
+        builds_into : ['nashors_tooth', 'blade_of_the_ruined_king', 'kraken_slayer', 'runaans_hurricane'],
+        builds_from : ['dagger'],
         passive_name : 'Steeltipped',
-        passive_description : `Basic attacks deal 15 bonus physical damage on-hit.`,
+        passive_description : `Basic attacks deal 15 bonus magic damage on-hit.`,
     },
 
     hearthbound_axe : {
         epic : true,
         name : 'Hearthbound Axe',
         id : 3051,
-        price : 1000,
+        price : 1100,
         stats : {
-            ad : 15,
+            ad : 20,
            '%as': 0.15,
         },
         marksman : true,
         bruiser : true,
-        builds_into : ['trinity_force', 'wits_end', 'stridebreaker'],
-        builds_from : ['dagger', 'long_sword'],
+        builds_into : ['trinity_force', 'wits_end', 'stridebreaker', 'phantom_dancer'],
+        builds_from : ['long_sword', 'dagger', 'long_sword'],
         passive_name : 'Nimble',
         passive_description : `Basic attacks grant 20 [Melee champion] / 10 [Ranged champion] bonus movement speed for 2 seconds.`,
     },
@@ -3074,16 +3194,15 @@ export const league_of_legends_items = {
         epic : true,
         name : 'Zeal',
         id : 3086,
-        price : 1050,
+        price : 1100,
         stats : {
-           '%as': 0.18,
+            '%as': 0.15,
             '%crit' : 0.15,
+            '%ms' : 0.05,
         },
         marksman : true,
-        builds_into : ['phantom_dancer', 'runaans_hurricane', 'rapid_firecannon'],
+        builds_into : ['phantom_dancer', 'runaans_hurricane', 'rapid_firecannon', 'galeforce'],
         builds_from : ['cloack_of_agility', 'dagger'],
-        passive_name : 'Zealous',
-        passive_description : `Gain 7% bonus movement speed.`,
     },
 
     hextech_alternator : {
@@ -3214,7 +3333,7 @@ export const league_of_legends_items = {
             mr : 25,
         },
         tank : true,
-        builds_into : ['spirit_visage', 'abyssal_mask'],
+        builds_into : ['spirit_visage'],
         builds_from : ['ruby_crystal', 'null_magic_mantle'],
         passive_name : 'Incorporeal',
         passive_description : `Gain 150% base health regeneration after taking damage from a champion, with the duration equal to one third
@@ -3277,7 +3396,7 @@ export const league_of_legends_items = {
         epic : true,
         name : 'Lost Chapter',
         id : 3802,
-        price : 1300,
+        price : 1100,
         stats : {
             ap : 40,
             mana : 300,
@@ -3285,7 +3404,7 @@ export const league_of_legends_items = {
         },
         mage : true,
         builds_into : ['crown_of_the_shattered_queen', 'liandrys_anguish', 'ludens_tempest', 'everfrost'],
-        builds_from : ['amplifying_tome', 'sapphire_crystal', 'amplifying_tome'],
+        builds_from : ['amplifying_tome', 'sapphire_crystal'],
         passive_name : 'Enlighter',
         passive_description : `Upon leveling up restores 20% of maximum mana over 3 seconds.`,
     },
@@ -3314,7 +3433,7 @@ export const league_of_legends_items = {
             ad : 30,
            '%as': 0.15,
         },
-        builds_into : ['galeforce', 'kraken_slayer', 'immortal_shieldbow'],
+        builds_into : ['statikk_shiv', 'stormrazor'],
         builds_from : ['long_sword', 'dagger', 'long_sword'],
         passive_name : 'Precision',
         passive_description : `Basic attacks deal 20 bonus physical damage on-hit against minions and monsters.`,
@@ -3332,7 +3451,7 @@ export const league_of_legends_items = {
         },
         tank : true,
         support : true,
-        builds_into : ['evenshroud', 'locket_of_the_iron_solari', 'gargoyle_stoneplate', 'radiant_virtue', 'jaksho'],
+        builds_into : ['gargoyle_stoneplate', 'radiant_virtue', 'jaksho'],
         builds_from : ['null_magic_mantle', 'cloth_armor'],
     },
 
@@ -3461,7 +3580,7 @@ export const league_of_legends_items = {
             '%mana_regen' : 0.5,
         },
         support : true,
-        builds_into : ['forbidden_idol', 'bandleglass_mirror'],
+        builds_into : ['forbidden_idol', 'bandleglass_mirror', 'chalice_of_blessing'],
     },
 
     rejuvenation_bead : {
@@ -3474,7 +3593,7 @@ export const league_of_legends_items = {
         },
         tank : true,
         support : true,
-        builds_into : ['knights_vow', 'crystalline_bracer'],
+        builds_into : ['crystalline_bracer'],
     },
 
     cloth_armor : {
@@ -3489,7 +3608,7 @@ export const league_of_legends_items = {
         mage : true,
         support : true,
         builds_into : ['aegis_of_the_legion', 'bramble_vest', 'chain_vest', 'gargoyle_stoneplate', 'glacial_buckler', 'plated_steelcaps', 
-                       'seekers_armguard', 'wardens_mail'],
+                       'seekers_armguard', 'wardens_mail', 'lifewell_pendant'],
     },
 
     dagger : {
@@ -3503,7 +3622,7 @@ export const league_of_legends_items = {
         marksman : true,
         mage : true,
         bruiser : true,
-        builds_into : ['berserkers_greaves', 'guinsoos_rageblade', 'hearthbound_axe', 'kircheis_shard', 'noonquiver', 'rageknife', 'recurve_bow', 'runaans_hurricane', 'zeal'],
+        builds_into : ['berserkers_greaves', 'hearthbound_axe', 'noonquiver', 'rageknife', 'recurve_bow', 'zeal'],
     },
 
     sapphire_crystal : {
@@ -3532,7 +3651,8 @@ export const league_of_legends_items = {
         marksman : true,
         assasin : true,
         builds_into : ['black_cleaver', 'cauldfields_warhammer', 'edge_of_night', 'executioners_calling', 'hearthbound_axe', 'hexdrinker',
-                       'last_whisper', 'manamune', 'noonquiver', 'phage', 'phantom_dancer', 'serrated_dirk', 'umbral_glaive', 'vampiric_scepter'],
+                       'last_whisper', 'manamune', 'noonquiver', 'phage', 'serrated_dirk', 'umbral_glaive', 'vampiric_scepter',
+                       'galeforce', 'kircheis_shard', 'rapid_firecannon'],
     },
 
     ruby_crystal : {
@@ -3550,8 +3670,8 @@ export const league_of_legends_items = {
         assasin : true,
         builds_into : ['bamis_cinder', 'catalyst_of_aeons', 'chempunk_chainsword', 'crystalline_bracer', 'dead_mans_plate', 'edge_of_night', 
                        'force_of_nature', 'giants_belt', 'hextech_alternator', 'jaksho', 'kindlegem', 'leeching_leer', 'phage',  
-                       'radiant_virtue', 'silvermere_dawn', 'spectres_cowl', 'steraks_gage', 'titanic_hydra', 'turbo_chemtank', 'winged_moonplate', 
-                       'winters_approach',],
+                       'silvermere_dawn', 'spectres_cowl', 'steraks_gage', 'titanic_hydra', 'turbo_chemtank', 'winged_moonplate', 
+                       'winters_approach', 'chalice_of_blessing', 'lifewell_pendant'],
     },
 
     amplifying_tome : {
@@ -3564,10 +3684,10 @@ export const league_of_legends_items = {
         },
         mage : true,
         support : true,
-        builds_into : ['aether_wisp', 'ardent_censer', 'bandleglass_mirror', 'blighting_jewel', 'crown_of_the_shattered_queen', 'demonic_embrace',
+        builds_into : ['aether_wisp', 'bandleglass_mirror', 'blighting_jewel', 'crown_of_the_shattered_queen', 'demonic_embrace',
                        'everfrost', 'fiendish_codex', 'hextech_alternator', 'hextech_rocketbelt', 'leeching_leer', 'lost_chapter', 'night_harvester', 
-                       'oblivion_orb', 'rylais_crystal_scepter', 'seekers_armguard', 'staff_of_the_flowing_water', 'verdant_barrier',
-                       'rod_of_ages', 'morellonomicon', 'cosmic_drive'],
+                       'oblivion_orb', 'rylais_crystal_scepter', 'seekers_armguard', 'verdant_barrier',
+                       'rod_of_ages', 'morellonomicon', 'cosmic_drive', 'guinsoos_rageblade'],
     },
 
     null_magic_mantle : {
@@ -3585,7 +3705,7 @@ export const league_of_legends_items = {
         support : true,
         assasin : true,
         builds_into : ['aegis_of_the_legion', 'gargoyle_stoneplate', 'hexdrinker', 'mercurys_treads', 'negatron_cloack', 'quicksilver_sash',
-                       'spectres_cowl', 'verdant_barrier', 'wits_end'],
+                       'spectres_cowl', 'verdant_barrier', 'wits_end', 'locket_of_the_iron_solari'],
     },
 
     cloack_of_agility : {
@@ -3599,8 +3719,9 @@ export const league_of_legends_items = {
         marksman : true,
         assasin : true,
         bruiser : true,
-        builds_into : ['bloodthirster', 'essence_reaver', 'galeforce', 'guinsoos_rageblade', 'immortal_shieldbow', 'infinity_edge', 'kraken_slayer',
-                       'lord_dominiks_regards', 'mercurial_scimitar', 'navori_quickblades', 'stormrazor', 'the_collector', 'zeal', 'mortal_reminder'],
+        builds_into : ['bloodthirster', 'essence_reaver', 'immortal_shieldbow', 'infinity_edge', 'kraken_slayer',
+                       'lord_dominiks_regards', 'mercurial_scimitar', 'navori_quickblades', 'stormrazor', 'the_collector', 
+                       'zeal', 'mortal_reminder', 'statikk_shiv'],
     },
 
     stopwatch : {
@@ -3643,8 +3764,9 @@ export const league_of_legends_items = {
         marksman : true,
         bruiser : true,
         assasin : true,
-        builds_into : ['blade_of_the_ruined_king', 'deaths_dance', 'galeforce', 'hullbreaker', 'infinity_edge', 'ironspike_whip', 'kraken_slayer',
-                       'mercurial_scimitar', 'navori_quickblades', 'serpents_fang', 'silvermere_dawn', 'steraks_gage', 'the_collector', 'tiamat', 'wits_end'],
+        builds_into : ['blade_of_the_ruined_king', 'deaths_dance', 'hullbreaker', 'infinity_edge', 'ironspike_whip', 'mercurial_scimitar', 
+                       'navori_quickblades', 'serpents_fang', 'silvermere_dawn', 'steraks_gage', 'the_collector', 'tiamat', 
+                       'wits_end', 'guinsoos_rageblade', 'immortal_shieldbow'],
     },
 
     watchful_wardstone : {
@@ -3655,12 +3777,15 @@ export const league_of_legends_items = {
         stats : {
             hp : 150,
             haste : 10,
+            '%mana_regen' : 0.50,
         },
         support : true,
         builds_into : ['vigilant_wardstone'],
-        item_inherent : `Automatically upgrades to Vigilant Wardstone after completing a support quest and reaching level 13.`,
+        item_inherent : `Can only be purchased after completing a support quest.`,
         passive_name : 'Arcane Cache',
         passive_description : `This item can store up to 3 purchased Control Wards.`,
+        passive2_name : 'Blessing of Ixtal',
+        passive2_description : `Increases bonus attack damage, bonus health, ability power and ability haste by 8%.`,
     },
 
     needlessly_large_rod : {
@@ -3684,7 +3809,7 @@ export const league_of_legends_items = {
             ad : 40,
         },
         marksman : true,
-        builds_into : ['guardian_angel', 'infinity_edge', 'bloodthirster', 'stormrazor', 'spear_of_shojin'],
+        builds_into : ['guardian_angel', 'infinity_edge', 'bloodthirster', 'spear_of_shojin', 'galeforce'],
     },
 
     dark_seal : {
