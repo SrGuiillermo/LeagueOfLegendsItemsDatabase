@@ -8,9 +8,9 @@ This database contains all League of Legends items's stats, passives, actives an
 ```
 Object name : {                               --> In-game name of the object
      type of object : true,                   --> Such as mythic, legendary, basic, etc. ornn for ornn's upgraded mythics
-     name : 'name',                           --> The name of the object to display, capìtalized in string format
-     id : id,                                 --> The item's ID, usefull to get the item's icon for example
-     price : price,                           --> The item's total cost (not combined cost) in int format
+     name : str,                           --> The name of the object to display, capìtalized in string format
+     id : int,                                 --> The item's ID, usefull to get the item's icon for example
+     price : int,                           --> The item's total cost (not combined cost) in int format
      stats : {                                --> The item's stats in object format with the following stats' names
          ad : int,                            --> Attack Damage
          '%crit' : float,                     --> Critical strike chance in divided by 100

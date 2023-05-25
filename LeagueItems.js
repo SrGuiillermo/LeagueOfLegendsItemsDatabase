@@ -471,7 +471,7 @@ export const league_of_legends_items = {
         },
     },
     
-    liandrys_anguish : {
+    liandrys_lament : {
         ornn : true,
         name : "Liandry's Lament",
         id : 7012,
