@@ -137,8 +137,8 @@ export const league_of_legends_items = {
         builds_from : ['kindlegem', 'bandleglass_mirror'],
         passive_name : 'Starlit Grace',
         passive_description : `Healing or shielding an allied champion chains the effect to the other nearest champion within 
-                               800 units of them 20% - 35%(based on ally's level) of the heal or 30% - 40%(based on ally's level) of the shield.
-                               If no other allied champions are in the radius, grant the same target an additional 15% - 25%(based on ally's level)
+                               800 units of them 20% - 40%(based on ally's level) of the heal or 30% - 40%(based on ally's level) of the shield.
+                               If no other allied champions are in the radius, grant the same target an additional 15% - 30%(based on ally's level)
                                of the heal or 20% - 30%(based on ally's level) of the shield.`,
         mythic_stats : {
             haste : 5,
@@ -160,7 +160,7 @@ export const league_of_legends_items = {
         builds_from : ['chalice_of_blessing', 'bandleglass_mirror'],
         passive_name : 'Soulsiphon',
         passive_description : `Damaging an enemy champion with a basic attack or ability damage grants a Soul Shard, up to 2. Healing or shielding an allied champion
-                               (excluding yourself) consumes all Soul Shards to heal them for 20-100(based on target's level) and deal 30-200(based on target's level)
+                               (excluding yourself) consumes all Soul Shards to heal them for 20-80(based on target's level) and deal 30-180(based on target's level)
                                magic damage to the nearest enemy champion per shard.`,
         passive2_name : 'Dissonance',
         passive2_description : `Gain 3 ability power for every additional 25% base mana regeneration. Disables Harmony on your other items.`,
@@ -322,9 +322,9 @@ export const league_of_legends_items = {
         assasin : true,
         builds_from : ['serrated_dirk', 'cauldfields_warhammer'],
         passive_name : 'Nightstalker',
-        passive_description : `Your spells deal up to an additional 15% bonus damage based on the target's missing health.
-                               When a champion that you have damaged within the last 3 seconds dies, this cooldown is refreshed and 
-                               you become untargetable for non-structures for 1.5 seconds.`,
+        passive_description : `Your spells deal up to an additional 20% bonus damage based on the target's missing health 
+                               (max damage at 30% remaining health). When a champion that you have damaged within the last 
+                               3 seconds dies, this cooldown is refreshed and you become untargetable for non-structures for 1.5 seconds.`,
         passive_cooldown : 10,
         mythic_stats : {
             ms : 5,
@@ -366,7 +366,7 @@ export const league_of_legends_items = {
         stats : {
             ad : 75,
             lethality : 25,
-            haste : 26,
+            haste : 20,
         },
         assasin : true,
         builds_from : ['serrated_dirk', 'cauldfields_warhammer'],
@@ -375,7 +375,7 @@ export const league_of_legends_items = {
         active_cooldown : 45,
         passive_name : 'Haunt',
         passive_description : `Moving generates Spectral Shards (up to 100). For each stack gain 0.4 Movement Speed (maximum of 40 movement speed) out of combat. 
-                               At maximum stacks, gain 8-20 (based on level) lethality. These stacks reset 3 seconds after dealing damage to an enemy champion
+                               At maximum stacks, gain 3 - 12 (based on level) lethality. These stacks reset 3 seconds after dealing damage to an enemy champion
                                while at maximum stacks.`,
         mythic_stats : {
             ad : 7,
@@ -629,7 +629,7 @@ export const league_of_legends_items = {
         builds_from : ['b_f_sword', 'zeal', 'long_sword'],
         active_name : 'Cloudburst',
         active_description : `Dash 200-425 units to a targeted location and fire three homing missiles at the most wounded enemy within 750 units,
-                              dealing a total of 150-350 (based on level)(+250% critical strike chance), increased by 0% - 60% based on target's missing health.`,
+                              dealing a total of 150-350 (based on level)(+200% critical strike chance), increased by 0% - 50% based on target's missing health.`,
         active_cooldown : 90,
         mythic_stats : {
             ad : 5,
@@ -685,18 +685,18 @@ export const league_of_legends_items = {
         id : 7032,
         price : 3400,
         stats : {
-            ad : 80,
+            ad : 85,
             '%crit' : 0.2,
-            haste : 30,
+            haste : 25,
         },
         marksman : true,
-        builds_from : ['cauldfields_warhammer', 'pickaxe', 'cloack_of_agility'],
+        builds_from : ['cauldfields_warhammer', 'b_f_sword', 'cloack_of_agility'],
         passive_name : 'Transcendance',
-        passive_description : `Basic attacks on-hit reduce your basic abilities's current cooldowns by 12% of their remaining cooldowns.`,
+        passive_description : `Basic attacks on-hit reduce your basic abilities's current cooldowns by 15% of their remaining cooldowns.`,
         passive2_name : 'Impermanence',
         passive2_description : `Your ability damage is increased by 0% - 20%(based on critical strike chance).`,
         mythic_stats : {
-            haste : 5,
+            ad : 5,
         },
     },
 
@@ -784,8 +784,8 @@ export const league_of_legends_items = {
         builds_from : ['kindlegem', 'bandleglass_mirror'],
         passive_name : 'Starlit Grace',
         passive_description : `Healing or shielding an allied champion chains the effect to the other nearest champion within 
-                               800 units of them 20% - 35%(based on ally's level) of the heal or 30% - 40%(based on ally's level) of the shield.
-                               If no other allied champions are in the radius, grant the same target an additional 15% - 25%(based on ally's level)
+                               800 units of them 20% - 40%(based on ally's level) of the heal or 30% - 40%(based on ally's level) of the shield.
+                               If no other allied champions are in the radius, grant the same target an additional 15% - 30%(based on ally's level)
                                of the heal or 20% - 30%(based on ally's level) of the shield.`,
         mythic_stats : {
             haste : 5,
@@ -807,7 +807,7 @@ export const league_of_legends_items = {
         builds_from : ['chalice_of_blessing', 'bandleglass_mirror'],
         passive_name : 'Soulsiphon',
         passive_description : `Damaging an enemy champion with a basic attack or ability damage grants a Soul Shard, up to 2. Healing or shielding an allied champion
-                               (excluding yourself) consumes all Soul Shards to heal them for 20-100(based on target's level) and deal 30-200(based on target's level)
+                               (excluding yourself) consumes all Soul Shards to heal them for 20-80(based on target's level) and deal 30-180(based on target's level)
                                magic damage to the nearest enemy champion per shard.`,
         passive2_name : 'Dissonance',
         passive2_description : `Gain 3 ability power for every additional 25% base mana regeneration. Disables Harmony on your other items.`,
@@ -964,7 +964,7 @@ export const league_of_legends_items = {
         stats : {
             ad : 60,
             lethality : 18,
-            haste : 20,
+            haste : 15,
         },
         assasin : true,
         builds_from : ['serrated_dirk', 'cauldfields_warhammer'],
@@ -973,7 +973,7 @@ export const league_of_legends_items = {
         active_cooldown : 45,
         passive_name : 'Haunt',
         passive_description : `Moving generates Spectral Shards (up to 100). For each stack gain 0.4 Movement Speed (maximum of 40 movement speed) out of combat. 
-                               At maximum stacks, gain 8-20 (based on level) lethality. These stacks reset 3 seconds after dealing damage to an enemy champion
+                               At maximum stacks, gain 3 - 12 (based on level) lethality. These stacks reset 3 seconds after dealing damage to an enemy champion
                                while at maximum stacks.`,
         mythic_stats : {
             ad : 7,
@@ -993,9 +993,9 @@ export const league_of_legends_items = {
         assasin : true,
         builds_from : ['serrated_dirk', 'cauldfields_warhammer'],
         passive_name : 'Nightstalker',
-        passive_description : `Your spells deal up to an additional 15% bonus damage based on the target's missing health.
-                               When a champion that you have damaged within the last 3 seconds dies, this cooldown is refreshed and 
-                               you become untargetable for non-structures for 1.5 seconds.`,
+        passive_description : `Your spells deal up to an additional 20% bonus damage based on the target's missing health 
+                               (max damage at 30% remaining health). When a champion that you have damaged within the last 
+                               3 seconds dies, this cooldown is refreshed and you become untargetable for non-structures for 1.5 seconds.`,
         passive_cooldown : 10,
         mythic_stats : {
             ms : 5,
@@ -1275,7 +1275,7 @@ export const league_of_legends_items = {
         builds_from : ['b_f_sword', 'zeal', 'long_sword'],
         active_name : 'Cloudburst',
         active_description : `Dash 200-425 units to a targeted location and fire three homing missiles at the most wounded enemy within 750 units,
-                              dealing a total of 150-350 (based on level)(+250% critical strike chance), increased by 0% - 60% based on target's missing health.`,
+                              dealing a total of 150-350 (based on level)(+200% critical strike chance), increased by 0% - 50% based on target's missing health.`,
         active_cooldown : 90,
         mythic_stats : {
             ad : 5,
@@ -1333,18 +1333,18 @@ export const league_of_legends_items = {
         id : 6675,
         price : 3400,
         stats : {
-            ad : 60,
+            ad : 65,
             '%crit' : 0.2,
-            haste : 20,
+            haste : 15,
         },
         marksman : true,
-        builds_from : ['cauldfields_warhammer', 'pickaxe', 'cloack_of_agility'],
+        builds_from : ['cauldfields_warhammer', 'b_f_sword', 'cloack_of_agility'],
         passive_name : 'Transcendance',
-        passive_description : `Basic attacks on-hit reduce your basic abilities's current cooldowns by 12% of their remaining cooldowns.`,
+        passive_description : `Basic attacks on-hit reduce your basic abilities's current cooldowns by 15% of their remaining cooldowns.`,
         passive2_name : 'Impermanence',
         passive2_description : `Your ability damage is increased by 0% - 20%(based on critical strike chance).`,
         mythic_stats : {
-            haste : 5,
+            ad : 5,
         },
     },
 
@@ -1361,8 +1361,8 @@ export const league_of_legends_items = {
         marksman : true,
         builds_from : ['noonquiver', 'cloack_of_agility', 'recurve_bow'],
         passive_name : 'Bring it down',
-        passive_description : `Every third attack deal 20(+60% bonus AD)(+45% bonus AP) magic damage on-hit. Subsequent triggers on the same target within 6
-                               seconds increases this damage by 50%, up to a maximum of 100% increased damage.`
+        passive_description : `Every third attack deal 35 - 85(based on level)(+65% bonus AD)(+60% bonus AP) physical damage on-hit. 
+                               Subsequent triggers on the same target within 6 seconds increases this damage by 50%, up to a maximum of 100% increased damage.`
     },
     
     immortal_shieldbow : {
@@ -1541,7 +1541,7 @@ export const league_of_legends_items = {
         support : true,
         builds_from : ['aether_wisp', 'forbidden_idol'],
         passive_name : 'Sanctify',
-        passive_description : `Healing or shielding allied champions (excluding yourself) enchances you and them for 6 seconds, granting 15% - 30% (based on target's level)
+        passive_description : `Healing or shielding allied champions (excluding yourself) enchances you and them for 6 seconds, granting 20%
                                bonus attack speed and 15 - 30 (based on target's level) bonus magic damage on-hit on basic attacks.`,
     },
 
@@ -1770,7 +1770,7 @@ export const league_of_legends_items = {
         marksman : true,
         builds_from : ['zeal', 'recurve_bow'],
         passive_name : 'Peck',
-        passive_description : `Attack apply 30 magic damage on-hit.`,
+        passive_description : `Attack apply 15 magic damage on-hit.`,
         passive2_name : "Wind's Fury",
         passive2_description : `Basic attacks on-attack fire additional bolts at up to 2 enemies in front of you, each dealing 50% total AD physical damage. Bolts
                                apply on-hit effects at 100% effectiveness and are affected by critical strike modifiers. Can only be purchased on ranged champions.`,
@@ -1791,8 +1791,8 @@ export const league_of_legends_items = {
         passive_name : 'Energized',
         passive_description : `Moving and basic attacking generates Energized stacks, up to 100.`,
         passive2_name : 'Electroshock',
-        passive2_description : `When fully Energized, your next basic attack deals 60-170(based on level)(+50% total AP) bonus magic damage, increased
-                                to 220% against minions. Energized attakcs bounce their additional effect to a target within 500 units, repeating
+        passive2_description : `When fully Energized, your next basic attack deals 80 - 190(based on level)(+50% total AP) bonus magic damage, increased
+                                to 250% against minions. Energized attakcs bounce their additional effect to a target within 500 units, repeating
                                 from the new target to strike up to 6/9/12(levels 1/11/16) targets.`,
     },
 
@@ -1900,7 +1900,7 @@ export const league_of_legends_items = {
         id : 3095,
         price : 3000,
         stats : {
-            ad : 55,
+            ad : 50,
             '%as': 0.15,
             '%crit' : 0.2,
         },
@@ -1909,7 +1909,7 @@ export const league_of_legends_items = {
         passive_name : 'Energized',
         passive_description : `Moving and basic attacking generates Energize stacks, up to 100.`,
         passive2_name : 'Paralyze',
-        passive2_description : `When fully Energized, your next basic attack deals 25(+65% total AD)(+50% total AP) bonus magic damage on-hit. 
+        passive2_description : `When fully Energized, your next basic attack deals 15(+60% total AD)(+50% total AP) bonus magic damage on-hit. 
                                 Energized attacks grant 45% bonus move speed for 1 second.`,
     },
 
@@ -3765,8 +3765,7 @@ export const league_of_legends_items = {
         bruiser : true,
         assasin : true,
         builds_into : ['blade_of_the_ruined_king', 'deaths_dance', 'hullbreaker', 'infinity_edge', 'ironspike_whip', 'mercurial_scimitar', 
-                       'navori_quickblades', 'serpents_fang', 'silvermere_dawn', 'steraks_gage', 'the_collector', 'tiamat', 
-                       'wits_end', 'guinsoos_rageblade', 'immortal_shieldbow'],
+                       'serpents_fang', 'silvermere_dawn', 'steraks_gage', 'the_collector', 'tiamat', 'wits_end', 'guinsoos_rageblade', 'immortal_shieldbow'],
     },
 
     watchful_wardstone : {
@@ -3809,7 +3808,7 @@ export const league_of_legends_items = {
             ad : 40,
         },
         marksman : true,
-        builds_into : ['guardian_angel', 'infinity_edge', 'bloodthirster', 'spear_of_shojin', 'galeforce'],
+        builds_into : ['guardian_angel', 'infinity_edge', 'bloodthirster', 'spear_of_shojin', 'galeforce', 'navori_quickblades'],
     },
 
     dark_seal : {
