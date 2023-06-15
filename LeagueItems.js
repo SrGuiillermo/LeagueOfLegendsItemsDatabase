@@ -32,7 +32,7 @@
 //          '%tenacity' : float,                 --> Percentage tenacity divided by 100 such as mercury's treads
 //          '%slow_resist' : float,              --> Percentage slow resistance divided by 100 such as Boots of swiftness
 //          '%size' : float,                     --> Percentage bonus size divided by 100 such as heartsteel
-//          custom : str,                        --> Custom specific stats such as locket mythic bonus or moonstone mythic bonus
+//          custom : str,                        --> Custom specific stats such as locket mythic bonus
 //      },
 //      bundle_type : true,                      --> Bundle type of the item such as bruiser, marksman, assasin, mage, tank and support
 //      builds_into : array,                     --> The items that the item builds into as an array
@@ -50,7 +50,7 @@
 //      mythic_stats : {},                       --> Mythics stats bonuses for each legendary item, with the same format as de stats above
 // }
 //
-// PATCH 13.9
+// PATCH 13.12
 
 export const league_of_legends_items = {
     shurelyas_requiem : {
@@ -137,11 +137,11 @@ export const league_of_legends_items = {
         builds_from : ['kindlegem', 'bandleglass_mirror'],
         passive_name : 'Starlit Grace',
         passive_description : `Healing or shielding an allied champion chains the effect to the other nearest champion within 
-                               800 units of them 20% - 40%(based on ally's level) of the heal or 30% - 40%(based on ally's level) of the shield.
-                               If no other allied champions are in the radius, grant the same target an additional 15% - 30%(based on ally's level)
-                               of the heal or 20% - 30%(based on ally's level) of the shield.`,
+                               800 units of them 35% of the heal or 40% of the shield.
+                               If no other allied champions are in the radius, grant the same target an additional 25%
+                               of the heal or 30% of the shield.`,
         mythic_stats : {
-            haste : 5,
+            '%hspower' : 0.05,
         },
     },
 
@@ -620,7 +620,7 @@ export const league_of_legends_items = {
         id : 7006,
         price : 3400,
         stats : {
-            ad : 70,
+            ad : 65,
             '%as': 0.30,
             '%crit' : 0.2,
             '%ms' : 0.10,
@@ -629,7 +629,7 @@ export const league_of_legends_items = {
         builds_from : ['b_f_sword', 'zeal', 'long_sword'],
         active_name : 'Cloudburst',
         active_description : `Dash 200-425 units to a targeted location and fire three homing missiles at the most wounded enemy within 750 units,
-                              dealing a total of 150-350 (based on level)(+200% critical strike chance), increased by 0% - 50% based on target's missing health.`,
+                              dealing a total of 150-350 (based on level)(+45% bonus AD), increased by 0% - 50% based on target's missing health.`,
         active_cooldown : 90,
         mythic_stats : {
             ad : 5,
@@ -784,11 +784,11 @@ export const league_of_legends_items = {
         builds_from : ['kindlegem', 'bandleglass_mirror'],
         passive_name : 'Starlit Grace',
         passive_description : `Healing or shielding an allied champion chains the effect to the other nearest champion within 
-                               800 units of them 20% - 40%(based on ally's level) of the heal or 30% - 40%(based on ally's level) of the shield.
-                               If no other allied champions are in the radius, grant the same target an additional 15% - 30%(based on ally's level)
-                               of the heal or 20% - 30%(based on ally's level) of the shield.`,
+                               800 units of them 35% of the heal or 40% of the shield.
+                               If no other allied champions are in the radius, grant the same target an additional 25%
+                               of the heal or 30% of the shield.`,
         mythic_stats : {
-            haste : 5,
+            '%hspower' : 0.05,
         },
     },
 
@@ -1266,7 +1266,7 @@ export const league_of_legends_items = {
         id : 6671,
         price : 3400,
         stats : {
-            ad : 55,
+            ad : 50,
             '%as': 0.15,
             '%crit' : 0.2,
             '%ms' : 0.07,
@@ -1275,7 +1275,7 @@ export const league_of_legends_items = {
         builds_from : ['b_f_sword', 'zeal', 'long_sword'],
         active_name : 'Cloudburst',
         active_description : `Dash 200-425 units to a targeted location and fire three homing missiles at the most wounded enemy within 750 units,
-                              dealing a total of 150-350 (based on level)(+200% critical strike chance), increased by 0% - 50% based on target's missing health.`,
+                              dealing a total of 150-350 (based on level)(+45% bonus AD), increased by 0% - 50% based on target's missing health.`,
         active_cooldown : 90,
         mythic_stats : {
             ad : 5,
@@ -1373,7 +1373,7 @@ export const league_of_legends_items = {
         stats : {
             ad : 50,
             '%crit' : 0.2,
-            '%life_steal' : 0.07,
+            '%life_steal' : 0.10,
         },
         marksman : true,
         builds_from : ['pickaxe', 'cloack_of_agility', 'vampiric_scepter'],
@@ -1542,7 +1542,7 @@ export const league_of_legends_items = {
         builds_from : ['aether_wisp', 'forbidden_idol'],
         passive_name : 'Sanctify',
         passive_description : `Healing or shielding allied champions (excluding yourself) enchances you and them for 6 seconds, granting 20%
-                               bonus attack speed and 15 - 30 (based on target's level) bonus magic damage on-hit on basic attacks.`,
+                               bonus attack speed and 15 bonus magic damage on-hit on basic attacks.`,
     },
 
     staff_of_the_flowing_water : {
@@ -1576,9 +1576,9 @@ export const league_of_legends_items = {
         support : true,
         builds_from : ['bandleglass_mirror', 'fiendish_codex'],
         passive_name : 'Coordinated Fire',
-        passive_description : `Abilities that Slow or Immobilize a champion deal 35 - 75 (based on level) bonus magic damage and marks them
-                               for 4 seconds. Ally champion damage detonates the mark, dealing an additional 70 - 150 
-                               (based on ally level) magic damage and granting you both 20% Move Speed for 2 seconds.`,
+        passive_description : `Abilities that Slow or Immobilize a champion deal 40 - 60 (based on level) bonus magic damage and marks them
+                               for 4 seconds. Ally champion damage detonates the mark, dealing an additional 80 - 120 
+                               (based on ally level) magic damage and granting you both 25% Move Speed for 2 seconds.`,
         passive_cooldown : 6,
     },
 
@@ -1637,7 +1637,7 @@ export const league_of_legends_items = {
         passive_name : 'Energized',
         passive_description : `Moving and basic attacking generates Energize stacks, up to 100.`,
         passive2_name : 'Sharpshooter',
-        passive2_description : `When fully Energized, your next basic attack deals 60-140(based on level) bonus magic damage on-hit. 
+        passive2_description : `When fully Energized, your next basic attack deals 60 bonus magic damage on-hit. 
                                 Energized attacks gain 35% bonus range, capped at 150.`,
     },
 
@@ -1746,7 +1746,7 @@ export const league_of_legends_items = {
         price : 2800,
         stats : {
             ad : 20,
-            '%as': 0.30,
+            '%as': 0.35,
             '%crit' : 0.2,
             '%ms' : 0.07,
         },
@@ -1791,7 +1791,7 @@ export const league_of_legends_items = {
         passive_name : 'Energized',
         passive_description : `Moving and basic attacking generates Energized stacks, up to 100.`,
         passive2_name : 'Electroshock',
-        passive2_description : `When fully Energized, your next basic attack deals 80 - 190(based on level)(+50% total AP) bonus magic damage, increased
+        passive2_description : `When fully Energized, your next basic attack deals 100 - 180(based on level)(+50% total AP) bonus magic damage, increased
                                 to 250% against minions. Energized attakcs bounce their additional effect to a target within 500 units, repeating
                                 from the new target to strike up to 6/9/12(levels 1/11/16) targets.`,
     },
@@ -2614,7 +2614,7 @@ export const league_of_legends_items = {
         legendary : true,
         name : 'Bloodthirster',
         id : 3072,
-        price : 3200,
+        price : 3400,
         stats : {
             ad : 55,
             '%crit' : 0.2,
