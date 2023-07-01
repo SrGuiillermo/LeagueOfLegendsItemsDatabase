@@ -50,7 +50,7 @@
 //      mythic_stats : {},                       --> Mythics stats bonuses for each legendary item, with the same format as de stats above
 // }
 //
-// PATCH 13.12
+// PATCH 13.13
 
 export const league_of_legends_items = {
     shurelyas_requiem : {
@@ -1791,9 +1791,9 @@ export const league_of_legends_items = {
         passive_name : 'Energized',
         passive_description : `Moving and basic attacking generates Energized stacks, up to 100.`,
         passive2_name : 'Electroshock',
-        passive2_description : `When fully Energized, your next basic attack deals 100 - 180(based on level)(+50% total AP) bonus magic damage, increased
-                                to 250% against minions. Energized attakcs bounce their additional effect to a target within 500 units, repeating
-                                from the new target to strike up to 6/9/12(levels 1/11/16) targets.`,
+        passive2_description : `When fully Energized, your next basic attack deals 100 - 180(based on level)(+30% total AP) bonus magic damage,
+                                250 - 450(based on level) against minions. Energized attakcs bounce their additional effect to a target within 
+                                500 units, repeating from the new target to strike up to 6/9/12(levels 1/11/16) targets.`,
     },
 
     banshees_veil : {
@@ -1909,7 +1909,7 @@ export const league_of_legends_items = {
         passive_name : 'Energized',
         passive_description : `Moving and basic attacking generates Energize stacks, up to 100.`,
         passive2_name : 'Paralyze',
-        passive2_description : `When fully Energized, your next basic attack deals 15(+60% total AD)(+50% total AP) bonus magic damage on-hit. 
+        passive2_description : `When fully Energized, your next basic attack deals 90(+25% total AD) bonus magic damage on-hit. 
                                 Energized attacks grant 45% bonus move speed for 1 second.`,
     },
 
@@ -2059,7 +2059,7 @@ export const league_of_legends_items = {
         marksman : true,
         builds_from : ['sheen', 'guardians_hammer', 'cloack_of_agility'],
         passive_name : 'Spellblade',
-        passive_description : `After using an ability your next basic attack within 10 seconds deals 100% base AD(+40% bonus AD) bonus physical damage
+        passive_description : `After using an ability your next basic attack within 10 seconds deals 130% base AD(+20% bonus AD) bonus physical damage
                                on-hit and restores mana equal to 40% base AD(+16% bonus AD).`,
         passive_cooldown : 1.5,
     },
