@@ -50,7 +50,7 @@
 //      mythic_stats : {},                       --> Mythics stats bonuses for each legendary item, with the same format as de stats above
 // }
 //
-// PATCH 13.13
+// PATCH 13.14
 
 export const league_of_legends_items = {
     shurelyas_requiem : {
@@ -630,7 +630,7 @@ export const league_of_legends_items = {
         active_name : 'Cloudburst',
         active_description : `Dash 200-425 units to a targeted location and fire three homing missiles at the most wounded enemy within 750 units,
                               dealing a total of 150-350 (based on level)(+45% bonus AD), increased by 0% - 50% based on target's missing health.`,
-        active_cooldown : 90,
+        active_cooldown : 180,
         mythic_stats : {
             ad : 5,
         }
@@ -1238,7 +1238,7 @@ export const league_of_legends_items = {
         price : 3333,
         stats : {
             ad : 40,
-           '%as': 0.35,
+           '%as': 0.33,
             hp : 300,
             haste : 20,
         },
@@ -1247,7 +1247,7 @@ export const league_of_legends_items = {
         builds_from : ['sheen', 'hearthbound_axe', 'kindlegem'],
         passive_name : 'Threeforld Strike',
         passive_description : `Basic attacks grant 20 bonus move speed for 5 seconds. If the target is a champion or a structure,
-                               increase base attack damage by 4% for 5 seconds, stacking up to 5 times for 20%. Stacks expire by one every 0.5 seconds
+                               increase base attack damage by 6% for 5 seconds, stacking up to 3 times for 18%. Stacks expire by one every 0.5 seconds
                                when the duration ends.`,
         passive2_name : 'Spellblade',
         passive2_description : `After using an ability, your next basic attack within 10 seconds deals (200% base AD) bonus physical damage on-hit.`,
@@ -1276,7 +1276,7 @@ export const league_of_legends_items = {
         active_name : 'Cloudburst',
         active_description : `Dash 200-425 units to a targeted location and fire three homing missiles at the most wounded enemy within 750 units,
                               dealing a total of 150-350 (based on level)(+45% bonus AD), increased by 0% - 50% based on target's missing health.`,
-        active_cooldown : 90,
+        active_cooldown : 120,
         mythic_stats : {
             ad : 5,
         }
@@ -1314,14 +1314,12 @@ export const league_of_legends_items = {
         id : 3031,
         price : 3400,
         stats : {
-            ad : 70,
+            ad : 65,
             '%crit' : 0.2,
+            '%crit_dmg' : 0.45,
         },
         marksman : true,
         builds_from : ['b_f_sword', 'pickaxe', 'cloack_of_agility'],
-        passive_name : 'Perfection',
-        passive_description : `Gain 35% bonus critical strike damage if you have at least 40% critical strike chance. Unique with Guinsoo's Rageblade
-                               and Navori Quickblades.`,
         mythic_stats : {
             ad : 5,
         },
@@ -1783,7 +1781,7 @@ export const league_of_legends_items = {
         price : 3000,
         stats : {
             ad : 45,
-            '%as' : 0.25,
+            '%as' : 0.3,
             '%crit' : 0.2,
         },
         marksman : true,
@@ -1792,7 +1790,7 @@ export const league_of_legends_items = {
         passive_description : `Moving and basic attacking generates Energized stacks, up to 100.`,
         passive2_name : 'Electroshock',
         passive2_description : `When fully Energized, your next basic attack deals 100 - 180(based on level)(+30% total AP) bonus magic damage,
-                                250 - 450(based on level) against minions. Energized attakcs bounce their additional effect to a target within 
+                                250 - 350(based on level) against minions. Energized attakcs bounce their additional effect to a target within 
                                 500 units, repeating from the new target to strike up to 6/9/12(levels 1/11/16) targets.`,
     },
 
@@ -1973,7 +1971,7 @@ export const league_of_legends_items = {
         passive_name : 'Rock solid',
         passive_description : `Every first incoming instance of post-mitigation basic attack damage is reduced by 5(+3.5% per 1000 maximum health), capped at 40% total reduction.`,
         passive2_name : 'Critical resilience',
-        passive2_description : `Reduces incoming critical strike damage by 20%`,
+        passive2_description : `Reduces incoming critical strike damage by 25%`,
     },
 
     abyssal_mask : {
@@ -2115,7 +2113,7 @@ export const league_of_legends_items = {
         price : 2900,
         stats : {
             hp : 450,
-            mr : 50,
+            mr : 60,
             haste : 10,
             '%hp_regen' : 1,
         },
@@ -2299,7 +2297,7 @@ export const league_of_legends_items = {
         stats : {
             ad : 55,
             lethality : 15,
-            haste : 15,
+            haste : 18,
         },
         assasin : true,
         builds_from : ['serrated_dirk', 'cauldfields_warhammer'],
@@ -2427,16 +2425,17 @@ export const league_of_legends_items = {
         assasin : true,
         builds_from : ['serrated_dirk', 'cauldfields_warhammer'],
         passive_name : 'Flux',
-        passive_description : `Scoring a takedown against an enemy champion within 3 seconds of damaging them refunds 20% of your ultimate ability's total cooldown.`,
+        passive_description : `Scoring a takedown against an enemy champion within 3 seconds of damaging them refunds 5% (+40% of total Lethality)
+                               of your ultimate ability's total cooldown.`,
     },
 
     steraks_gage : {
         legendary : true,
         name : "Serak's Gage",
         id : 3053,
-        price : 3100,
+        price : 3000,
         stats : {
-            hp : 400,
+            hp : 450,
         },
         bruiser : true,
         builds_from : ['pickaxe', 'phage', 'ruby_crystal'],
@@ -2663,11 +2662,11 @@ export const league_of_legends_items = {
         legendary : true,
         name : 'Spear of Shojin',
         id : 3161,
-        price : 3400,
+        price : 3300,
         stats : {
             ad : 65,
             haste : 20,
-            hp : 300,
+            hp : 350,
         },
         bruiser : true,
         assasin : true,
