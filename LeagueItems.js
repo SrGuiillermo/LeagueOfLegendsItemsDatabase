@@ -50,7 +50,7 @@
 //      mythic_stats : {},                       --> Mythics stats bonuses for each legendary item, with the same format as de stats above
 // }
 //
-// PATCH 13.14
+// PATCH 13.15
 
 export const league_of_legends_items = {
     shurelyas_requiem : {
@@ -1110,8 +1110,9 @@ export const league_of_legends_items = {
         mage : true,
         builds_from : ['blasting_wand', 'hextech_alternator', 'amplifying_tome'],
         passive_name : 'Soulrend',
-        passive_description : `Damaging an enemy champion deals 125 (+15% AP) bonus magic damage and grants you 25% bonus movement speed for 1.5 seconds,
-                               with the duration extending on subsequent triggers. This item's cooldowns is per champion.`,
+        passive_description : `Damaging an enemy champion with an attack, ability or pet damage deals 125 (+15% AP) bonus magic damage
+                               and grants you 25% bonus movement speed for 1.5 seconds, with the duration extending on subsequent triggers. 
+                               This item's cooldowns is per champion.`,
         mythic_stats : {
             haste : 5,
         },
