@@ -50,7 +50,7 @@
 //      mythic_stats : {},                       --> Mythics stats bonuses for each legendary item, with the same format as de stats above
 // }
 //
-// PATCH 13.15
+// PATCH 13.16
 
 export const league_of_legends_items = {
     shurelyas_requiem : {
@@ -993,10 +993,10 @@ export const league_of_legends_items = {
         assasin : true,
         builds_from : ['serrated_dirk', 'cauldfields_warhammer'],
         passive_name : 'Nightstalker',
-        passive_description : `Your spells deal up to an additional 20% bonus damage based on the target's missing health 
+        passive_description : `Your spells deal up to an additional 18% bonus damage based on the target's missing health 
                                (max damage at 30% remaining health). When a champion that you have damaged within the last 
                                3 seconds dies, this cooldown is refreshed and you become untargetable for non-structures for 1.5 seconds.`,
-        passive_cooldown : 10,
+        passive_cooldown : 30,
         mythic_stats : {
             ms : 5,
             haste : 5,
@@ -1495,7 +1495,7 @@ export const league_of_legends_items = {
         price : 2300,
         stats : {
             ad : 50,
-            lethality : 10,
+            lethality : 13,
             haste : 15,
         },
         assasin : true,
@@ -1869,7 +1869,7 @@ export const league_of_legends_items = {
         price : 2600,
         stats : {
             ad : 55,
-            lethality : 12,
+            lethality : 15,
         },
         assasin : true,
         builds_from : ['serrated_dirk', 'pickaxe'],
@@ -2303,9 +2303,9 @@ export const league_of_legends_items = {
         assasin : true,
         builds_from : ['serrated_dirk', 'cauldfields_warhammer'],
         passive_name : 'Sandswipe',
-        passive_description : `After dashing, blinking, or exiting stealth, your next attack on an enemy champion deals 85(+45% total AD) [Melee champion] / 
-                               65(+30% total AD) [Ranged champion]. Melee champions also slow by 99% for 0.5 seconds.`,
-        passive_cooldown : 10,
+        passive_description : `After dashing, blinking, or exiting stealth, your next attack on an enemy champion deals 85(+55% total AD) [Melee champion] / 
+                               65(+35% total AD) [Ranged champion]. Melee champions also slow by 99% for 0.5 seconds.`,
+        passive_cooldown : 5,
     },
 
     horizon_focus : {
@@ -2426,7 +2426,7 @@ export const league_of_legends_items = {
         assasin : true,
         builds_from : ['serrated_dirk', 'cauldfields_warhammer'],
         passive_name : 'Flux',
-        passive_description : `Scoring a takedown against an enemy champion within 3 seconds of damaging them refunds 5% (+40% of total Lethality)
+        passive_description : `Scoring a takedown against an enemy champion within 3 seconds of damaging them refunds 10% (+40% of total Lethality)
                                of your ultimate ability's total cooldown.`,
     },
 
