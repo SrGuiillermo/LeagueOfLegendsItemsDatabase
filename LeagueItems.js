@@ -50,7 +50,7 @@
 //      mythic_stats : {},                       --> Mythics stats bonuses for each legendary item, with the same format as de stats above
 // }
 //
-// PATCH 13.19
+// PATCH 13.20
 
 export const league_of_legends_items = {
     shurelyas_requiem : {
@@ -315,12 +315,12 @@ export const league_of_legends_items = {
         stats : {
             ad : 75,
             lethality : 26,
-            haste : 25,
+            haste : 20,
         },
         assasin : true,
         builds_from : ['serrated_dirk', 'cauldfields_warhammer'],
         passive_name : 'Nightstalker',
-        passive_description : `Your spells deal up to an additional 18% bonus damage based on the target's missing health 
+        passive_description : `Your spells deal up to an additional 16% bonus damage based on the target's missing health 
                                (max damage at 30% remaining health). When a champion that you have damaged within the last 
                                3 seconds dies, this cooldown is refreshed and you become untargetable for non-structures for 1.5 seconds.`,
         passive_cooldown : 30,
@@ -373,7 +373,7 @@ export const league_of_legends_items = {
         active_cooldown : 45,
         passive_name : 'Haunt',
         passive_description : `Moving generates Spectral Shards (up to 100). For each stack gain 0.4 Movement Speed (maximum of 40 movement speed) out of combat. 
-                               At maximum stacks, gain 3 - 12 (based on level) lethality. These stacks reset 3 seconds after dealing damage to an enemy champion
+                               At maximum stacks, gain 7 - 18 (based on level) lethality. These stacks reset 3 seconds after dealing damage to an enemy champion
                                while at maximum stacks.`,
         mythic_stats : {
             ad : 7,
@@ -969,7 +969,7 @@ export const league_of_legends_items = {
         active_cooldown : 45,
         passive_name : 'Haunt',
         passive_description : `Moving generates Spectral Shards (up to 100). For each stack gain 0.4 Movement Speed (maximum of 40 movement speed) out of combat. 
-                               At maximum stacks, gain 3 - 12 (based on level) lethality. These stacks reset 3 seconds after dealing damage to an enemy champion
+                               At maximum stacks, gain 7 - 18 (based on level) lethality. These stacks reset 3 seconds after dealing damage to an enemy champion
                                while at maximum stacks.`,
         mythic_stats : {
             ad : 7,
@@ -984,12 +984,12 @@ export const league_of_legends_items = {
         stats : {
             ad : 60,
             lethality : 18,
-            haste : 20,
+            haste : 15,
         },
         assasin : true,
         builds_from : ['serrated_dirk', 'cauldfields_warhammer'],
         passive_name : 'Nightstalker',
-        passive_description : `Your spells deal up to an additional 18% bonus damage based on the target's missing health 
+        passive_description : `Your spells deal up to an additional 16% bonus damage based on the target's missing health 
                                (max damage at 30% remaining health). When a champion that you have damaged within the last 
                                3 seconds dies, this cooldown is refreshed and you become untargetable for non-structures for 1.5 seconds.`,
         passive_cooldown : 30,
@@ -2211,7 +2211,7 @@ export const league_of_legends_items = {
         assasin : true,
         builds_from : ['last_whisper', 'cloack_of_agility'],
         passive_name : 'Giant slayer',
-        passive_description : `Deal 0% - 25% (based on maximum health difference)(maximum bonus at 2500 health difference) 
+        passive_description : `Deal 0% - 22% (based on maximum health difference)(maximum bonus at 2500 health difference) 
                                bonus physical and magic damage against enemy champions with greater maximum health than you. Limited to 1 Last Whisper item.`,
     },
 
@@ -3340,7 +3340,7 @@ export const league_of_legends_items = {
         epic : true,
         name : 'Blighting Jewel',
         id : 4630,
-        price : 1250,
+        price : 1100,
         stats : {
             ap : 25,
             '%magic_pen' : 0.13,
