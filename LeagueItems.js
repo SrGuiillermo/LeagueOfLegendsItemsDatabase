@@ -50,7 +50,7 @@
 //      mythic_stats : {},                       --> Mythics stats bonuses for each legendary item, with the same format as de stats above
 // }
 //
-// PATCH 13.16
+// PATCH 13.17
 
 export const league_of_legends_items = {
     shurelyas_requiem : {
@@ -91,7 +91,7 @@ export const league_of_legends_items = {
         support : true,
         builds_from : ['kindlegem', 'aegis_of_the_legion'],
         passive_name : 'Coruscation',
-        passive_description : 'After Immobilizing champions or being Immobilized, cause that target and all enemy Champions within 600 radius to take 10% increased damage for 5 seconds.',
+        passive_description : 'After Immobilizing champions or being Immobilized, cause that target and all enemy Champions within 600 radius to take 7% increased damage for 5 seconds.',
         mythic_stats : {
             armor : 5,
             mr : 5,
@@ -322,10 +322,10 @@ export const league_of_legends_items = {
         assasin : true,
         builds_from : ['serrated_dirk', 'cauldfields_warhammer'],
         passive_name : 'Nightstalker',
-        passive_description : `Your spells deal up to an additional 20% bonus damage based on the target's missing health 
+        passive_description : `Your spells deal up to an additional 18% bonus damage based on the target's missing health 
                                (max damage at 30% remaining health). When a champion that you have damaged within the last 
                                3 seconds dies, this cooldown is refreshed and you become untargetable for non-structures for 1.5 seconds.`,
-        passive_cooldown : 10,
+        passive_cooldown : 30,
         mythic_stats : {
             ms : 5,
             haste : 5,
@@ -523,12 +523,12 @@ export const league_of_legends_items = {
         price : 3200,
         stats : {
             ad : 70,
-            hp : 450,
+            hp : 550,
             haste : 25,
             '%omnivamp' : 0.12,
         },
         bruiser : true,
-        builds_from : ['ironspike_whip', 'cauldfields_warhammer', 'kindlegem'],
+        builds_from : ['ironspike_whip', 'phage', 'kindlegem'],
         active_name : 'Thirsting Slash',
         active_description : `Deal (175% base AD) physical damage to enemies hit in a 450 radious center around you. Heal for (20% total AD + 8% of your missing health)
                               for each enemy hit. Cooldown is reduced by ability haste.`,
@@ -547,7 +547,7 @@ export const league_of_legends_items = {
         stats : {
             ad : 70,
            '%as': 0.3,
-            hp : 400,
+            hp : 475,
             haste : 25,
         },
         bruiser : true,
@@ -738,7 +738,7 @@ export const league_of_legends_items = {
         support : true,
         builds_from : ['lifewell_pendant', 'null_magic_mantle'],
         passive_name : 'Coruscation',
-        passive_description : 'After Immobilizing champions or being Immobilized, cause that target and all enemy Champions within 600 radius to take 10% increased damage for 5 seconds.',
+        passive_description : 'After Immobilizing champions or being Immobilized, cause that target and all enemy Champions within 600 radius to take 7% increased damage for 5 seconds.',
         mythic_stats : {
             armor : 5,
             mr : 5,
@@ -1170,12 +1170,12 @@ export const league_of_legends_items = {
         price : 3200,
         stats : {
             ad : 55,
-            hp : 300,
+            hp : 400,
             haste : 20,
             '%omnivamp' : 0.08,
         },
         bruiser : true,
-        builds_from : ['ironspike_whip', 'cauldfields_warhammer', 'kindlegem'],
+        builds_from : ['ironspike_whip', 'phage', 'kindlegem'],
         active_name : 'Thirsting Slash',
         active_description : `Deal (175% base AD) physical damage to enemies hit in a 450 radious center around you. Heal for (20% total AD + 8% of your missing health)
                               for each enemy hit. Cooldown is reduced by ability haste.`,
@@ -1194,7 +1194,7 @@ export const league_of_legends_items = {
         stats : {
             ad : 60,
            '%as': 0.2,
-            hp : 300,
+            hp : 375,
             haste : 20,
         },
         bruiser : true,
@@ -1378,7 +1378,7 @@ export const league_of_legends_items = {
         builds_from : ['pickaxe', 'cloack_of_agility', 'vampiric_scepter'],
         passive_name : 'Lifeline',
         passive_description : `If you would take damage that would reduce you below 30% of your maximum health, you first gain a shield 
-                               that absorbs 215 - 500 (based on level) damage for 3 seconds and 30% bonus attack speed 
+                               that absorbs 290 - 500 (based on level) damage for 3 seconds and 30% bonus attack speed 
                                for 8 seconds. Limited to 1 Lifeline item.`,
         passive_cooldown : 90,
         mythic_stats : {
@@ -1790,7 +1790,7 @@ export const league_of_legends_items = {
         passive_name : 'Energized',
         passive_description : `Moving and basic attacking generates Energized stacks, up to 100.`,
         passive2_name : 'Electroshock',
-        passive2_description : `When fully Energized, your next basic attack deals 100 - 180(based on level)(+30% total AP) bonus magic damage,
+        passive2_description : `When fully Energized, your next basic attack deals 100 - 180(based on level)(+15% total AP) bonus magic damage,
                                 250 - 350(based on level) against minions. Energized attakcs bounce their additional effect to a target within 
                                 500 units, repeating from the new target to strike up to 6/9/12(levels 1/11/16) targets.`,
     },
@@ -2623,7 +2623,7 @@ export const league_of_legends_items = {
         marksman : true,
         builds_from : ['b_f_sword', 'cloack_of_agility', 'vampiric_scepter'],
         passive_name : 'Engorge',
-        passive_description : `While above 50% Health, gain an additional 10-40 Attack Damage (based on level).`,
+        passive_description : `While above 70% Health, gain an additional 10-40 Attack Damage (based on level).`,
     },
 
     rabadons_deathcap : {
@@ -2665,15 +2665,15 @@ export const league_of_legends_items = {
         id : 3161,
         price : 3300,
         stats : {
-            ad : 65,
+            ad : 60,
             haste : 20,
-            hp : 350,
+            hp : 500,
         },
         bruiser : true,
         assasin : true,
-        builds_from : ['cauldfields_warhammer', 'b_f_sword', 'kindlegem'],
+        builds_from : ['cauldfields_warhammer', 'pickaxe', 'kindlegem'],
         passive_name : 'Dragonforce',
-        passive_description : `Gain 8(+8% bonus AD) [Melee champion] / 6(+6% bonus AD) [Ranged champion] basic ability haste, reduced by 50% for
+        passive_description : `Gain 16(+4% bonus AD) [Melee champion] / 12(+3% bonus AD) [Ranged champion] basic ability haste, reduced by 50% for
                                immobilizing spells. Unique with Navori Quickblades.`,
         passive2_name : 'Exigency',
         passive2_description : `Gain up to 15% [Melee champion] / 10% [Ranged champion] bonus movement speed based on missing health, capped at 33%
@@ -3232,7 +3232,7 @@ export const league_of_legends_items = {
             hp : 200,
         },
         bruiser : true,
-        builds_into : ['steraks_gage', 'hullbreaker'],
+        builds_into : ['steraks_gage', 'hullbreaker', 'goredrinker'],
         builds_from : ['ruby_crystal', 'long_sword'],
         passive_name : 'Sturdy',
         passive_description : `After dealing physical damage to an enemy champion, heal for 1.6% [Melee champion] / 0.8% [Ranged champion]
@@ -3252,7 +3252,7 @@ export const league_of_legends_items = {
         bruiser : true,
         assasin : true,
         builds_into : ['axiom_arc', 'black_cleaver', 'chempunk_chainsword', 'divine_sunderer', 'duskblade_of_draktharr',
-                       'essence_reaver', 'goredrinker', 'manamune', 'maw_of_malmortius', 'navori_quickblades', 'prowlers_claw', 'ravenous_hydra',
+                       'essence_reaver', 'manamune', 'maw_of_malmortius', 'navori_quickblades', 'prowlers_claw', 'ravenous_hydra',
                        'seryldas_grudge', 'youmuus_ghostblade', 'spear_of_shojin', 'eclipse', 'deaths_dance'],
         builds_from : ['long_sword', 'long_sword'],
     },
@@ -3765,7 +3765,8 @@ export const league_of_legends_items = {
         bruiser : true,
         assasin : true,
         builds_into : ['blade_of_the_ruined_king', 'deaths_dance', 'hullbreaker', 'infinity_edge', 'ironspike_whip', 'mercurial_scimitar', 
-                       'serpents_fang', 'silvermere_dawn', 'steraks_gage', 'the_collector', 'tiamat', 'wits_end', 'guinsoos_rageblade', 'immortal_shieldbow'],
+                       'serpents_fang', 'silvermere_dawn', 'steraks_gage', 'the_collector', 'tiamat', 'wits_end', 'guinsoos_rageblade', 
+                       'immortal_shieldbow', 'spear_of_shojin'],
     },
 
     watchful_wardstone : {
@@ -3808,7 +3809,7 @@ export const league_of_legends_items = {
             ad : 40,
         },
         marksman : true,
-        builds_into : ['guardian_angel', 'infinity_edge', 'bloodthirster', 'spear_of_shojin', 'galeforce', 'navori_quickblades'],
+        builds_into : ['guardian_angel', 'infinity_edge', 'bloodthirster', 'galeforce', 'navori_quickblades'],
     },
 
     dark_seal : {
