@@ -50,7 +50,7 @@
 //      mythic_stats : {},                       --> Mythics stats bonuses for each legendary item, with the same format as de stats above
 // }
 //
-// PATCH 13.20
+// PATCH 13.21
 
 export const league_of_legends_items = {
     shurelyas_requiem : {
@@ -2035,7 +2035,7 @@ export const league_of_legends_items = {
         bruiser : true,
         builds_from : ['pickaxe', 'phage', 'winged_moonplate'],
         passive_name : 'Boarding part',
-        passive_description : `While no allied champions are within 1400 units, gain 10 - 75 [Melee champion] / 5 - 37.5 [Ranged champion] (based on level)
+        passive_description : `While no allied champions are within 1400 units, gain 10 - 60 [Melee champion] / 5 - 30 [Ranged champion] (based on level)
                                bonus armor and magic resistance and 20% bonus basic damage against structures. Allied siege minions and super minions 
                                within 1050 units gain 30 - 225 [Melee champion] / 15 - 112.5 [Ranged champion] (based on level) bonus armor and 
                                magic resistance, 10% bonus size and deal 200% bonus damage against structures.`,
