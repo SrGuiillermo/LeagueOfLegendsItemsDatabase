@@ -50,7 +50,7 @@
 //      mythic_stats : {},                       --> Mythics stats bonuses for each legendary item, with the same format as de stats above
 // }
 //
-// PATCH 13.17
+// PATCH 13.18
 
 export const league_of_legends_items = {
     shurelyas_requiem : {
@@ -175,7 +175,7 @@ export const league_of_legends_items = {
         id : 7024,
         price : 2800,
         stats :  {
-            ap : 90,
+            ap : 105,
             hp : 350,
             mana : 800,
             haste : 25,
@@ -186,8 +186,6 @@ export const league_of_legends_items = {
         passive_description : `You are Safeguarded, reducing incoming champion damage by 75%. Safeguard persists for 1.5 seconds after taking champion damage.
                                Cooldown restarts upon taking damage from enemy champions.`,
         passive_cooldown : 40,
-        passive2_name : 'Holy Gift',
-        passive2_description : `While Safeguarded and for 3 seconds after it is broken, gain 10-40 (based on level) Ability Power.`,
         mythic_stats : {
             '%ms' : 0.01,
             ap : 8,
@@ -822,7 +820,7 @@ export const league_of_legends_items = {
         id : 4644,
         price : 2800,
         stats :  {
-            ap : 70,
+            ap : 85,
             hp : 250,
             mana : 600,
             haste : 20,
@@ -830,11 +828,9 @@ export const league_of_legends_items = {
         mage : true,
         builds_from : ['kindlegem', 'lost_chapter', 'amplifying_tome'],
         passive_name : 'Divine Safeguard',
-        passive_description : `You are Safeguarded, reducing incoming champion damage by 75%. Safeguard persists for 1.5 seconds after taking champion damage.
+        passive_description : `You are Safeguarded, reducing incoming champion damage by 40%. Safeguard persists for 2.5 seconds after taking champion damage.
                                Cooldown restarts upon taking damage from enemy champions.`,
         passive_cooldown : 40,
-        passive2_name : 'Holy Gift',
-        passive2_description : `While Safeguarded and for 3 seconds after it is broken, gain 10-40 (based on level) Ability Power.`,
         mythic_stats : {
             '%ms' : 0.01,
             ap : 8,
@@ -1781,7 +1777,7 @@ export const league_of_legends_items = {
         id : 3087,
         price : 3000,
         stats : {
-            ad : 45,
+            ad : 50,
             '%as' : 0.3,
             '%crit' : 0.2,
         },
@@ -1791,7 +1787,7 @@ export const league_of_legends_items = {
         passive_description : `Moving and basic attacking generates Energized stacks, up to 100.`,
         passive2_name : 'Electroshock',
         passive2_description : `When fully Energized, your next basic attack deals 100 - 180(based on level)(+15% total AP) bonus magic damage,
-                                250 - 350(based on level) against minions. Energized attakcs bounce their additional effect to a target within 
+                                200 against minions. Energized attakcs bounce their additional effect to a target within 
                                 500 units, repeating from the new target to strike up to 6/9/12(levels 1/11/16) targets.`,
     },
 
@@ -1899,7 +1895,7 @@ export const league_of_legends_items = {
         id : 3095,
         price : 3000,
         stats : {
-            ad : 50,
+            ad : 55,
             '%as': 0.15,
             '%crit' : 0.2,
         },
@@ -2665,7 +2661,7 @@ export const league_of_legends_items = {
         id : 3161,
         price : 3300,
         stats : {
-            ad : 60,
+            ad : 55,
             haste : 20,
             hp : 500,
         },
