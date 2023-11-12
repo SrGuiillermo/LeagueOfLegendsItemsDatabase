@@ -50,7 +50,7 @@
 //      mythic_stats : {},                       --> Mythics stats bonuses for each legendary item, with the same format as de stats above
 // }
 //
-// PATCH 13.18
+// PATCH 13.19
 
 export const league_of_legends_items = {
     shurelyas_requiem : {
@@ -1787,7 +1787,7 @@ export const league_of_legends_items = {
         passive_description : `Moving and basic attacking generates Energized stacks, up to 100.`,
         passive2_name : 'Electroshock',
         passive2_description : `When fully Energized, your next basic attack deals 100 - 180(based on level)(+15% total AP) bonus magic damage,
-                                200 against minions. Energized attakcs bounce their additional effect to a target within 
+                                150 against minions. Energized attakcs bounce their additional effect to a target within 
                                 500 units, repeating from the new target to strike up to 6/9/12(levels 1/11/16) targets.`,
     },
 
@@ -1955,7 +1955,7 @@ export const league_of_legends_items = {
         legendary : true,
         name : "Randuin's Omen",
         id : 3143,
-        price : 3000,
+        price : 2700,
         stats : {
             hp : 400,
             armor : 60,
@@ -3161,7 +3161,7 @@ export const league_of_legends_items = {
         price : 1000,
         stats : {
             ap : 30,
-            armor : 15,
+            armor : 20,
         },
         mage : true,
         builds_into : ['zhonyas_hourglass'],
